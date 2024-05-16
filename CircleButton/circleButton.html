@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Button</title>
+
+    <link rel="stylesheet" type="text/css" href="circleButton.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bfc0ggr.css">
+</head>
+
+<body>
+
+    <a id="circularButton" href="#">
+        <span id="buttonText"> about hyte </span>
+        <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" style="background-color: transparent; overflow: visible;">
+            <defs>
+                <linearGradient id="borderGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color: var(--clr-neon-pink)" />
+                    <stop offset="100%" style="stop-color: var(--clr-neon-blue)" />
+                </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="none" stroke="url(#borderGradient)" stroke-width="2" />
+        </svg>
+        
+        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="110" height="16" viewBox="0 0 116 16" fill="none">
+            <path
+                d="M115.707 8.70711C116.098 8.31658 116.098 7.68342 115.707 7.29289L109.343 0.928932C108.953 0.538408 108.319 0.538408 107.929 0.928932C107.538 1.31946 107.538 1.95262 107.929 2.34315L113.586 8L107.929 13.6569C107.538 14.0474 107.538 14.6805 107.929 15.0711C108.319 15.4616 108.953 15.4616 109.343 15.0711L115.707 8.70711ZM0 9H115V7H0V9Z"
+                fill="#000211" />
+        </svg>
+    </a>
+
+</body>
+
+</html>

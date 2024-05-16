@@ -1,0 +1,300 @@
+:root {
+    --clr-blue-glow: hsl(180, 100%, 50%);
+    --clr-pink-glow: hsl(317, 100%, 50%);
+
+    --clr-feint-blue-glow: hsla(180, 100%, 50%, 0.5);
+    --clr-feint-pink-glow: hsla(317, 100%, 50%, 0.5);
+
+    --clr-feint-dark-blue: hsla(240, 100%, 50%, 0.5);
+
+    --clr-links: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+}
+
+/* .followerPage {
+    display: none;
+} */
+
+/* HYTE BRANDING */
+#footerPage h3 {
+    padding-top: 6rem;
+    padding-left: 8rem;
+
+    font-size: 80pt;
+    transform: skewX(-15deg);
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/*  */
+
+/* LINKS */
+#footerPage a {
+    text-decoration: none;
+    color: white;
+    z-index: 1000;
+}
+/*  */
+
+/* GENERAL PAGE SETUP */
+#footerPage {
+    /* height: 90vh; */
+    z-index: 100;
+
+    background: none;
+    overflow-x: hidden;
+}
+/*  */
+
+/* CONTACT LINK BEGINS*/
+#contactInfo {
+    padding: 3.5rem;
+    padding-left: 6rem;
+
+    line-height: 2rem;
+}
+/*  */
+
+#contactUs {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#email {
+    background: linear-gradient(to right,
+            var(--clr-blue-glow),
+            var(--clr-blue-glow)),
+        linear-gradient(to right,
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-dark-blue),
+            var(--clr-feint-pink-glow));
+
+    transition: 400ms ease;
+    /* background-size: 0% 2px, 0 2px; */
+    background-size: 0% 2px, 100% 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+}
+/* CONTACT LINK ENDS */
+
+/* FOOTER LINK ROW BEGINS */
+#footerMore {
+    display: flex;
+    padding-left: 6rem;
+}
+
+#followUs {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+#footerLinks {
+    display: flex;
+
+    gap: 10rem;
+}
+
+#linkHeader {
+    padding-bottom: 0.75rem;
+
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+#program {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 12rem;
+}
+
+#program a,
+#people a {
+    padding: 0.25rem;
+
+    color: var(--clr-links);
+
+    background: linear-gradient(to right,
+            var(--clr-blue-glow),
+            var(--clr-blue-glow)),
+        linear-gradient(to right,
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-dark-blue),
+            var(--clr-feint-pink-glow));
+
+    transition: 400ms ease;
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+}
+
+#regLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 52.5% 2px;
+}
+
+#whyLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 65% 2px;
+}
+
+#phaseLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 100% 2px;
+}
+
+#foundLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 100% 2px;
+}
+
+#mentLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 100% 2px;
+}
+
+#aboutLink:hover {
+    transform: translateX(0.5rem);
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+
+    background-size: 0% 2px, 75% 2px;
+}
+
+#people {
+    display: flex;
+    flex-direction: column;
+}
+
+#iconButton1,
+#iconButton2 {
+    background-color: #000211b1;
+    border-radius: 50%;
+    border: none;
+
+    filter: drop-shadow(0px 0px 30px rgb(177, 3, 204)) drop-shadow(0px 0px 20px rgba(0, 255, 225, 0.611));
+    backdrop-filter: blur(2px);
+
+    padding: 1.5rem;
+
+    transform: scale(0.8);
+    transition: 0.5s ease-out;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#iconButton2 {
+    margin-left: 2rem;
+}
+
+#icon {
+    transform: scale(0.9);
+}
+
+#iconButton1:hover,
+#iconButton2:hover {
+    transform: scale(0.7);
+    transition: 0.5s ease-out;
+}
+/* FOOTER LINK ROW ENDS */
+
+
+/* ESTABLISHED MESSAGE */
+#established {
+    padding-left: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    color: var(--clr-links);
+}
+/*  */
+
+
+/* BUTTON CUSTOMS FOR FOOTER PAGE */
+#footerButton {
+    position: absolute;
+
+    left: 50%;
+    transform: scale(1.5);
+    padding-bottom: 15rem;
+}
+
+#footerButton #buttonText {
+    color: white;
+    padding-right: 2rem;
+}
+
+#footerButton .arrow path {
+    fill: white;
+}
+
+#footerButton .circle {
+    /* z-index: 0; */
+    transform: scale(1.6);
+
+    opacity: 0.8;
+
+    border-radius: 50%;
+
+
+    background: linear-gradient(145deg, var(--clr-gradient-pink), var(--clr-gradient-blue));
+    box-shadow: 10px 10px 20px 5px #070113,
+        -10px -10px 20px 5px #4c23d2;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transition: 300ms ease-out;
+}
+
+#footerButton .circularButton:hover .circle {
+    transform: scale(1.7);
+    background: linear-gradient(145deg, var(--clr-gradient-pink), var(--clr-gradient-blue));
+    box-shadow: 10px 10px 20px 5px #070113,
+        -10px -10px 20px 5px #3b1ca2a2;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: 500ms ease-out;
+}
+
+/* BUTTON CUSTOMIZATION ENDS */

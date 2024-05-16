@@ -1,0 +1,357 @@
+:root {
+    --clr-links: hsla(0, 0%, 100%, 0.6);
+    --clr-line: hsla(0, 0%, 100%, 0.6);
+
+
+    --clr-font-grey-nav: rgba(221, 221, 221, 0.40);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    text-decoration: none;
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    /* font-size: 150%; */
+}
+
+.landingPageVideo {
+    z-index: -1000;
+    width: 120vw;
+    height: 120vh;
+    object-fit: cover;
+    position: fixed;
+}
+
+.black-text {
+    color: black;
+}
+
+.followerPage {
+    pointer-events: none;
+
+    /* background-color: yellow; */
+    
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+
+    color: #DDDDDD;
+    white-space: nowrap;
+
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.followerPage > * {
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-navigation, .links, .slogan {
+    position: absolute; 
+}
+
+.primary-navigation {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.links {
+    top: 50vh; /* Adjust according to actual needs */
+    right: 0;
+}
+
+.slogan {
+    top: 90vh;
+    right: 20vw;
+}
+
+/* Ensure that all clickable or interactive elements have pointer-events set to auto */
+.primary-navigation a, .links a {
+    pointer-events: auto;
+}
+
+.primary-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.1rem;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+.primary-navigation span {
+    color: var(--clr-font-grey-nav);
+    text-decoration: none;
+
+    font-size: 12pt;
+    text-align: center;
+}
+  
+
+
+#leftNav {
+    gap: 1rem;
+    margin: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#leftNav a {
+    letter-spacing: 0.2rem;
+}
+
+
+#leftNav span {
+    font-size: 7.42pt;
+    letter-spacing: 0.2rem;
+    
+    padding-top: 0.1rem;
+}
+
+#leftNav,
+#rightNav {
+    display: flex;
+    align-items: center;
+}
+
+#leftNav a {
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+/* #rightNav span {
+    margin-right: 2rem;
+} */
+
+/* #rightNav a {
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.734px;
+} */
+
+#rightNav {
+    /* padding: 1.5rem; */
+    gap: 1.5rem;
+    margin-right: 5%;
+}
+
+.links {
+    justify-content: flex-end;
+
+    margin-right: -1rem;
+    font-size: 10.7pt;
+    letter-spacing: 0.5rem;
+    color: var(--clr-links);
+}
+
+.links span {
+    transform: rotate(90deg);
+    color: var(--clr-links);
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--clr-links);
+}
+
+.slogan {
+    font-size: 28;
+    letter-spacing: 0.3rem;
+
+    margin-bottom: -1rem;
+    margin-right: -15%;
+
+    text-align: center;
+}
+
+/* 2000 px needs work */
+/* @media (min-width: 2000px) {
+
+    body {
+        font-size: 25pt;
+    }
+
+    #leftNav span {
+        font-size: 15pt;
+    }
+
+    #leftNav,
+    #rightNav {
+        padding: 4rem;
+    }
+
+
+    #rightNav a {
+        margin-right: 4rem;
+
+        letter-spacing: 0.734px;
+    }
+
+    .links {
+        font-size: 12pt;
+        letter-spacing: 0.5rem;
+    }
+
+    .slogan {
+        font-size: 19.416pt;
+        letter-spacing: 8.4;
+
+        margin-right: -15%;
+    }
+} */
+
+@media (min-width: 1600px) {}
+
+   /* body {
+        font-size: 18pt;
+    }
+
+    #leftNav {
+        gap: 2rem;
+    }
+
+    #leftNav span {
+        font-size: 12pt;
+        ;
+    }
+
+    #leftNav,
+    #rightNav {
+        padding: 4rem;
+    }
+
+    #rightNav a {
+        margin-right: 2rem;
+
+        letter-spacing: 0.734px;
+    }
+
+    .links {
+        font-size: 12pt;
+        letter-spacing: 0.5rem;
+    }
+
+    .slogan {
+        font-size: 19.416pt;
+        letter-spacing: 8.4;
+
+        margin-right: -15%;
+    }
+} */
+
+@media (max-width: 1230px) {}
+
+/*
+    body {
+        font-size: 12pt;
+    }
+
+    #leftNav,
+    #rightNav {
+        padding: 2rem;
+    }
+
+    #leftNav a {
+        margin-right: 1rem;
+    }
+
+    #rightNav a {
+
+        letter-spacing: 0.734px;
+    }
+
+} */
+@media (max-width: 1000px) {}
+    /* #rightNav {
+        margin-right: 4rem;
+    } */
+
+@media (max-width: 940px) {
+/* 
+    #leftNav{
+        padding: 0rem;
+    } */
+
+    #leftNav span {
+        display: none;
+    }
+
+    /* .slogan {
+        padding-right: 3rem;
+        overflow: visible;
+        font-size: 12pt;
+    } */
+
+}
+
+@media (max-width: 430px) {
+    #leftNav,
+    #rightNav,
+    .slogan {
+        font-size: 10pt;
+    }
+}
+
+@media (max-width: 410px) {
+    #programsNav {
+        display: none;
+    }
+
+}
+
+/* @media (max-width: 480px) {
+    #leftNav,
+    #rightNav {
+        font-size: 12pt; 
+    }
+} */
+
+/* @media (max-width: 590px) {
+
+
+    #rightNav {
+        padding: 4rem;
+    }
+
+} */
+
+/*
+
+@media (max-width: 420px) {
+    .slogan {
+        margin-top: 8rem;
+        margin-right: -2rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    #registerNow {
+        font-size: 10.7pt;
+        padding: 0;
+    }
+
+    #leftNav {
+        margin: 0;
+        padding-right: 0;
+    }
+
+    #rightNav {
+       margin-left: 5rem;
+    }
+}
+/*

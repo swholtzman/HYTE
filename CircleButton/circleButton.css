@@ -1,0 +1,128 @@
+:root {
+    --clr-neon-pink: hsl(320, 100%, 50%);
+    --clr-neon-blue: hsl(195, 100%, 50%);
+
+    --clr-blue-glow: hsl(180, 100%, 50%);
+    --clr-pink-glow: hsl(317, 100%, 50%);
+
+    --clr-clear-blue: hsla(238, 100%, 50%, 0.125);
+    --clr-clear-pink: hsla(297, 100%, 50%, 0.125);
+
+    --clr-whiteBlue: hsl(240, 100%, 94%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+.circularButton {
+    z-index: 150;
+
+    animation: bobbingAnimation 8s infinite ease-in-out;
+
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    overflow: visible;
+
+
+    /* box-shadow: 14px 14px 27px #8a8a8a,
+    -14px -14px 27px #ffffff; */
+
+}
+
+.buttonText {
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18pt;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    top: 15%;
+    /* Adjust the percentage based on your preference */
+    left: 84%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: visible;
+    z-index: 2;
+
+    transition: 300ms ease-in-out;
+    transition-delay: 0.2s;
+
+    filter: drop-shadow(10px 10px 20px #8a8a8a,
+            -10px -10px 20px #dddddd);
+}
+
+.arrow {
+    position: absolute;
+    top: 43%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transform: scale(0.9);
+
+    transition: 300ms ease-out;
+
+    filter: drop-shadow(10px 10px 20px #8a8a8a,
+            -10px -10px 20px #dddddd);
+}
+
+.circle {
+    z-index: 0;
+    transform: scale(1.3);
+
+    opacity: 0.5;
+
+    border-radius: 50%;
+
+    background: linear-gradient(white, var(--clr-clear-blue));
+    box-shadow: 19px 19px 38px #a4a4a4,
+        -19px -19px 38px #ffffff;
+
+    /* filter: drop-shadow(
+        14px 14px 27px #8a8a8a,
+        -14px -14px 27px #ffffff
+    ); */
+
+    transition: 300ms ease-out;
+}
+
+.circularButton:hover .circle {
+    transform: scale(1.4);
+    background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
+    box-shadow: 7px 7px 14px #a4a4a4,
+        -7px -7px 14px #ffffff;
+
+    transition: 500ms ease-out;
+}
+
+
+.circularButton:hover .arrow {
+    left: 50%;
+    transition: 300ms ease-out;
+
+}
+
+.circularButton:hover #buttonText {
+    left: 90%;
+    transition: 300ms ease-out;
+    transition-delay: 0.2s;
+}
+
+@keyframes bobbingAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}

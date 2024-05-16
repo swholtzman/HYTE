@@ -1,0 +1,201 @@
+:root {
+    --clr-blue-glow: hsl(180, 100%, 50%);
+    --clr-pink-glow: hsl(317, 100%, 50%);
+
+    --clr-feint-blue-glow: hsla(180, 100%, 50%, 0.5);
+    --clr-feint-pink-glow: hsla(317, 100%, 50%, 0.5);
+
+    --clr-feint-dark-blue: hsla(240, 100%, 50%, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+#whiteContent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    padding-left: 12.5%;
+    padding-top: 15%;
+}
+
+#whiteLinks {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 31pt;
+
+    gap: 2rem;
+    
+}
+
+#whiteLinks a {
+    z-index: 100;
+
+    text-decoration: none;
+    color: black;
+
+    transition: 400ms ease;
+    margin-left: 0rem;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    
+    background: linear-gradient(to right,
+            var(--clr-blue-glow),
+            var(--clr-blue-glow)),
+        linear-gradient(to right,
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-blue-glow),
+            var(--clr-feint-dark-blue),
+            var(--clr-feint-pink-glow));
+
+    /* background-size: 100% 3px, 0 3px; */
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+}
+
+#whiteLinks a:hover {
+    margin-left: 1rem;
+
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+    transition: 500ms;
+    /* transition: font-weight 200ms; */
+
+    background-size: 0% 2px, 95% 2px;
+}
+
+#whyHYTE {
+    width: 245px;
+
+    transition: 200ms;
+}
+
+#whyHYTE:hover {
+    width: 251px;
+
+    transition: 200ms;
+}
+
+#meetFounder {
+    width: 380px;
+
+    transition: 200ms;
+}
+
+#meetFounder:hover {
+    width: 392px;
+
+    transition: 200ms;
+}
+
+#ourMentors {
+    width: 265px;
+
+    transition: 200ms;
+}
+
+#ourMentors:hover {
+    width: 275px;
+
+    transition: 200ms;
+}
+
+#ourPrograms {
+    width: 300px;
+
+    transition: 200ms;
+}
+
+#ourPrograms:hover {
+    width: 310px;
+
+    transition: 200ms;
+}
+
+#more {
+    text-transform: uppercase;
+
+    color: grey;
+    font-size: 12pt;
+}
+
+#whitePageButton {
+    padding-left: 65vw;
+    margin-top: -10vh;
+    
+}
+
+#whiteButtonText {
+    margin-right: 1rem;
+}
+
+/* BUTTON CUSTOMS FOR LANDING PAGE */
+
+#whitePageButton .buttonText {
+    color: white;
+    padding-right: 2rem;
+}
+
+#whitePageButton .arrow path {
+    fill: white;
+}
+
+#whitePageButton .circle {
+    /* z-index: 0; */
+    transform: scale(1.6);
+
+    opacity: 0.5;
+
+    border-radius: 50%;
+
+
+    background: linear-gradient(white, var(--clr-clear-blue));
+    box-shadow: 19px 19px 38px #a4a4a4,
+        -19px -19px 38px #ffffff;
+
+    transition: 300ms ease-out;
+}
+
+#whitePageButton .circularButton:hover .circle {
+    transform: scale(1.7);
+    background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
+    box-shadow: 7px 7px 14px #a4a4a4,
+        -7px -7px 14px #ffffff;
+
+    transition: 500ms ease-out;
+}
+/* BUTTON CUSTOMIZATION ENDS */
+
+@media (max-width: 875px) {
+
+    #whitePageButton {
+        
+        margin-top: 5rem;
+        margin-left: -7.5rem;
+    
+        /* right: 50%; */
+    }
+}
+
+@media (max-width: 750px) {
+    #whiteContent {
+        padding-top: 20%;
+    }
+}
+
+@media (max-width: 420px) {
+    #whiteContent {
+        padding-top: 30%;
+    }
+}
+
+

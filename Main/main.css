@@ -1,0 +1,319 @@
+:root {
+
+    --clr-card-border: rgba(221, 221, 221, 0.20);
+    --clr-trans-white: rgba(255, 255, 255, 0.7);
+
+    --clr-neon-blue: hsl(180, 100%, 50%);
+    --clr-neon-pink: hsl(317, 100%, 50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: none;
+
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* FULL PAGE CSS STARTS */
+#pageGrid {
+    width: 100vw;
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh 100vh 110vh 100vh 100vh;
+    grid-template-areas:
+        "landing"
+        "whitePage"
+        "phases"
+        "sustain"
+        "footer";
+}
+
+/* FULL PAGE CSS ENDS */
+
+
+/* STICKY PAGE CSS STARTS */
+
+
+/* LANDING PAGE CSS STARTS */
+#landingContent {
+    grid-area: landing;
+}
+
+h1 {
+    font-style: italic;
+    transform: skewX(-15deg);
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 40vw;
+}
+
+#title-section {
+    width: 40vw;
+}
+
+#landingContent {
+    /* z-index: 150; */
+
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+/* BUTTON CUSTOMS FOR LANDING PAGE */
+#registerButton #buttonText {
+    color: white;
+    padding-right: 2rem;
+}
+
+#registerButton .arrow path {
+    fill: white;
+}
+
+#registerButton .circle {
+    /* z-index: 0; */
+    transform: scale(1.6);
+
+    opacity: 0.5;
+
+    border-radius: 50%;
+
+
+    background: linear-gradient(145deg, var(--clr-gradient-pink), var(--clr-gradient-blue));
+    box-shadow: 10px 10px 20px 5px #070113,
+        -10px -10px 20px 5px #3b1ca2;
+
+    /* filter: drop-shadow(
+        14px 14px 27px #8a8a8a,
+        -14px -14px 27px #ffffff
+    ); */
+
+    transition: 300ms ease-out;
+}
+
+#registerButton .circularButton:hover .circle {
+    transform: scale(1.7);
+    background: linear-gradient(145deg, var(--clr-gradient-pink), var(--clr-gradient-blue));
+    box-shadow: 10px 10px 20px 5px #070113,
+        -10px -10px 20px 5px #3b1ca2a2;
+
+    transition: 500ms ease-out;
+}
+
+/* BUTTON CUSTOMIZATION ENDS */
+
+
+/* LANDING PAGE CONTENT BEGINS */
+#title-section {
+    position: relative;
+
+    font-size: 100pt;
+    margin-top: 0rem;
+    left: 1.75rem;
+}
+
+#intro-section {
+    position: relative;
+    margin-top: -0.5rem;
+
+    width: 60vw;
+
+    font-size: 22pt;
+    letter-spacing: 0.2rem;
+}
+
+#registerButton {
+    position: relative;
+
+    /* padding-left: 60%; */
+    /* margin-top: -10rem; */
+}
+
+/* BUTTON ON THE SIDE LAYOUT */
+
+
+
+
+/* LANDING PAGE CONTENT ENDS */
+
+/* LANDING PAGE CSS ENDS */
+
+
+
+/* WHITE PAGE CSS STARTS */
+#whitePage {
+    grid-area: whitePage;
+    background-color: var(--clr-trans-white);
+
+    color: black;
+}
+
+/* WHITE PAGE CSS ENDS */
+
+
+
+/* PROGRAM PHASE CSS STARTS */
+#programPhases {
+    z-index: 50;
+
+    grid-area: phases;
+
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+/* PROGRAM PHASE CSS ENDS */
+
+
+
+/* SUSTAINABILITY PAGE STARTS */
+#sustainabilityButton {
+    position: absolute;
+    z-index: 20;
+    top: 362.5%;
+    left: 46.5%;
+    scale: 1.2;
+
+}
+
+.sustainabilityFrame {
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 355%;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SUSTAINABILITY PAGE ENDS */
+
+
+/* FOOTER PAGE CSS STARTS */
+#footerPage {
+    grid-area: footer;
+    z-index: 10;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.8) 5%,
+        rgba(0, 0, 0, 0.6) 20%, 
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.0) 70% 
+    );
+}
+
+
+
+/* FOOTER PAGE CSS ENDS */
+
+
+
+.landingPageVideo {
+    display: flex;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* RESPONSIVE EDITS */
+@media (min-width: 1100px) {
+    body {
+        font-size: 22pt;
+    }
+
+}
+
+@media (min-width: 1100px) {
+    #landingContent {
+        padding-top: 10rem;
+    }
+
+    #registerButton {
+        transform: scale(1.2);
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+    #registerButton {
+        margin-left: 10%;
+    }  
+
+}
+
+@media (max-width: 775px) {
+    #title-section {    
+        font-size: 80pt;
+       
+    }
+    
+    #intro-section {
+        font-size: 18pt;
+    }
+
+    #registerButton {
+        margin-left: -10;
+        margin-top: -50%;
+    }
+    
+}
+
+@media (max-width: 550px) {
+    #title-section {    
+        right: 0;
+        top: 5%;
+       
+    }
+    
+    #intro-section {
+        width: 70vw;
+        top: 5%;
+        font-size: 16pt;
+    }
+
+    #registerButton {
+        top: 20%;
+        right: 30%;
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 400px) {
+    #title-section {    
+        font-size: 70pt;
+        margin-left: 0;
+       
+    }
+    
+    #intro-section {
+        width: 80%;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    #registerButton {
+        top: 10%;
+        right: 30vw;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 945px) {
+
+}
+/* RESPONSIVE EDITS */
