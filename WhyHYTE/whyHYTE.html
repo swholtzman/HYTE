@@ -18,19 +18,19 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../hyteLandingPage/landing.css"
+      href="../Landing/landing.css"
     />
     <!-- COMPACT FOOTER PAGE CSS -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../hyteFooterPage/compactFooter.css"
+      href="../Footer/compactFooter.css"
     />
     <!-- STICKY PAGE CSS -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../hyteStickyPage/sticky.css"
+      href="../Follower/sticky.css"
     />
     <!-- FONT IMPORT -->
     <link rel="stylesheet" href="https://use.typekit.net/bfc0ggr.css" />
@@ -47,13 +47,13 @@
         <nav class="primary-navigation">
           <!-- LEFT SIDE OF NAV -->
           <div id="leftNav">
-            <a href="../hyteTestPage/test.html">hyte</a>
+            <a href="../Main/main.html">hyte</a>
             <span>horizons youth tech entrepreneurship</span>
           </div>
 
           <!-- RIGHT SIDE OF NAV BAR -->
           <div id="rightNav">
-            <a id="aboutHYTE" href="#">about hyte</a>
+            <a id="ourPrograms" href="../Programs/programs.html">our programs</a>
             <a
               id="registerNow"
               href="https://forms.gle/gkz4UE41K9qv3tDd7"
@@ -61,71 +61,6 @@
               >register now</a
             >
 
-            <!-- BOX MENU -->
-            <svg
-              class="boxMenu"
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 -10 80 80"
-              preserveAspectRatio="none"
-            >
-              <!-- Top-left square -->
-              <rect
-                id="topLeftBox"
-                x="3"
-                y="3"
-                width="24"
-                height="24"
-                rx="6"
-                ry="6"
-                stroke="#DDD"
-                stroke-width="4"
-                fill="none"
-              />
-
-              <!-- Top-right square -->
-              <rect
-                id="topRightBox"
-                x="37"
-                y="3"
-                width="24"
-                height="24"
-                rx="6"
-                ry="6"
-                stroke="#DDD"
-                stroke-width="4"
-                fill="none"
-              />
-
-              <!-- Bottom-left square -->
-              <rect
-                id="bottomLeftBox"
-                x="3"
-                y="37"
-                width="24"
-                height="24"
-                rx="6"
-                ry="6"
-                stroke="#DDD"
-                stroke-width="4"
-                fill="none"
-              />
-
-              <!-- Bottom-right square -->
-              <rect
-                id="bottomRightBox"
-                x="37"
-                y="37"
-                width="24"
-                height="24"
-                rx="6"
-                ry="6"
-                stroke="#DDD"
-                stroke-width="4"
-                fill="none"
-              />
-            </svg>
           </div>
         </nav>
 
@@ -154,7 +89,7 @@
       <!-- LANDING CLIP -->
       <video class="landingPageVideo" autoplay loop muted>
         <source
-          src="../hyteTestPage/images/HYTE-Landing.mp4"
+          src="../Main/images/HYTE-Landing.mp4"
           type="video/mp4"
         />
         <i>HYTE</i>
@@ -165,7 +100,7 @@
         <div id="landingText">
           <h4 id="whyText">Why</h4>
           <h2 id="hyteText">HYTE</h2>
-          <p id="whyParagraph">
+          <p id="whyParagraph" class="paragraph">
             The HYTE program covers the fundamentals of technology and
             entrepreneurship, exploring their integration. Participants delve
             into the essential aspects of launching a startup, guided by current
@@ -178,7 +113,7 @@
       <div id="why2">
         <div id="why2Image"></div>
         <div id="why2Content">
-          <div id="why2Text1">
+          <div id="why2Text1" class="paragraph">
             HYTE provides a platform for students to showcase leadership,
             initiative, and the successful execution of a technical project,
             offering the chance to win scholarships and awards. These qualities
@@ -197,11 +132,11 @@
               <circle cx="416" cy="72.5" r="72" stroke="#C8C8C8" />
               <path d="M488 72.5H832" stroke="#C8C8C8" stroke-linecap="round" />
             </svg>
+            <div id="why2DesignImage">
+            <img id="image1" class="linesImage" src="../Main/images/lines.png" alt="lines" />
           </div>
-          <div id="why2DesignImage">
-            <img id="image1" class="linesImage" src="../hyteSustainability/images/lines.png" alt="lines" />
           </div>
-          <div id="why2Text2">
+          <div id="why2Text2" class="paragraph">
             The HYTE program offers an insider's perspective on the tech
             industry and entrepreneurship, allowing you to gain valuable
             experience before high school graduation.
@@ -213,7 +148,7 @@
         <div id="linesImageWhy3"></div>
         <div id="why3Image"></div>
         <div id="why3Content">
-          <div id="why3Text1">
+          <div id="why3Text1" class="paragraph">
             HYTE culminates in a team-based competition for a $1000 
             scholarship. Engaging in workshops, seminars, interactive 
             activities, group projects, and optional prototype development, 
@@ -232,15 +167,16 @@
               <circle cx="416" cy="72.5" r="72" stroke="#C8C8C8" />
               <path d="M488 72.5H832" stroke="#C8C8C8" stroke-linecap="round" />
             </svg>
+            <div id="why3DesignImage">
+              <img id="image2" class="linesImage" src="../Main/images/lines.png" alt="lines" />
+            </div>
           </div>
-          <div id="why2DesignImage">
-            <img id="image2" class="linesImage" src="../hyteSustainability/images/lines.png" alt="lines" />
-          </div>
-          <div id="why3Text2">
+
+          <!-- <div id="why3Text2">
             Lorem ipsum dolor sit amet consectetur. Urna tempor id 
             faucibus fermentum vitae. Iaculis nisl cursus volutpat lacus 
             lorem mi eget.
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -373,23 +309,23 @@
                 >
                   Register
                 </a>
-                <a id="whyLink" href="../hyteWhyHYTE/whyHYTE.html">
+                <a id="whyLink" href="../WhyHYTE/whyHYTE.html">
                   Why HYTE
                 </a>
                 <a
                   id="phaseLink"
-                  href="../hytePhasesRedirect/phasesRedirect.html"
+                  href="../Programs/programs.html"
                 >
-                  Program Phases
+                  Our Programs
                 </a>
               </div>
 
               <!-- "THE PEOPLE" COLUMN -->
               <div id="people">
                 <p id="linkHeader">The People</p>
-                <a id="foundLink" href="../hyteFounderPage/founder.html"> The Founder </a>
-                <a id="mentLink" href="#"> The Mentors </a>
-                <a id="aboutLink" href="#"> About Us </a>
+                <a id="foundLink" href="../Founder/founder.html"> Our Founder </a>
+                <a id="mentLink" href="../Mentors/mentors.html"> Our Mentors </a>
+                <!-- <a id="aboutLink" href="#"> About Us </a> -->
               </div>
             </div>
           </div>

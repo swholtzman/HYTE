@@ -255,6 +255,15 @@ body {
 
 @media (max-width: 1230px) {}
 
+@media (min-width: 1100px) {
+    #leftNav,
+    #rightNav,
+    .slogan {
+        font-size: 18pt;
+    }
+
+}
+
 /*
     body {
         font-size: 12pt;

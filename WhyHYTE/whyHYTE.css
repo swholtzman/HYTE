@@ -1,4 +1,6 @@
-:root {}
+:root {
+    /* Add any CSS variables here if needed */
+}
 
 * {
     margin: 0;
@@ -6,11 +8,13 @@
     box-sizing: border-box;
 }
 
-body {}
+body {
+    /* Add body styles here if needed */
+}
 
+/* Full Page Layout */
 #pageGrid {
     display: grid;
-    /* This line is essential for enabling grid layout */
     grid-template-columns: 100vw;
     grid-template-rows: 100vh 100vh 100vh 80vh;
     grid-template-areas:
@@ -18,12 +22,9 @@ body {}
         "why2"
         "why3"
         "footer";
-
-
 }
 
-
-/* LANDING AREA */
+/* Landing Area */
 #linesImageLanding {
     position: absolute;
     top: -10%;
@@ -40,20 +41,8 @@ body {}
     scale: 0.225;
     border-radius: 50%;
     filter: contrast(1.1) saturate(1.1) brightness(1.1) hue-rotate(360deg);
-    -webkit-mask-image: radial-gradient(circle,
-            rgba(0, 0, 0, 1) 50%,
-            /* Fully opaque within the inner 85% */
-            rgba(0, 0, 0, 0.2) 65%,
-            rgba(0, 0, 0, 0) 100%
-            /* Fully transparent at the outer 15% */
-        );
-    mask-image: radial-gradient(circle,
-            rgba(0, 0, 0, 1) 50%,
-            /* Fully opaque within the inner 85% */
-            rgba(0, 0, 0, 0.2) 65%,
-            rgba(0, 0, 0, 0) 100%
-            /* Fully transparent at the outer 15% */
-        );
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-size: cover;
     mask-size: cover;
 }
@@ -67,24 +56,18 @@ body {}
 
 #landingText {
     flex-direction: column;
-
     position: absolute;
     left: 7.5%;
     top: 30%;
-
     justify-content: left;
     align-items: left;
-
 }
 
 #whyText {
     color: #CDCDCD;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 26pt;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-
     padding-left: 7.5%;
     margin-bottom: -5%;
 }
@@ -93,22 +76,20 @@ body {}
     font-size: 110pt;
     font-style: italic;
     transform: skewX(-15deg);
-    font-family: "anton", sans-serif;
+    font-family: "Anton", sans-serif;
     font-weight: 400;
-    font-style: normal;
     width: 40vw;
-
     padding-left: 15px;
+}
+
+.paragraph {
+    font-size: 16pt;
 }
 
 #whyParagraph {
     color: #FFF;
-    font-family: Montserrat;
-    font-size: 14pt;
-    font-style: normal;
+    font-family: Montserrat, sans-serif;
     font-weight: 300;
-    line-height: normal;
-
     width: 35vw;
 }
 
@@ -118,13 +99,10 @@ body {}
     top: 17.5%;
     width: 50vw;
     height: 60vh;
-
     background: url("./images/landing.png") lightgray 50% / cover no-repeat;
 }
-/* LANDING AREA */
 
-
-/* WHY 2 */
+/* Why 2 Section */
 #why2 {
     grid-area: why2;
     position: relative;
@@ -132,20 +110,14 @@ body {}
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0.69) 0%, 
-        rgba(0, 0, 0, 0.00) 57.5%);
-    
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0.00) 57.5%);
 }
 
 #why2Image {
     position: absolute;
     right: 55%;
-    /* top: 50%; */
     width: 42.5vw;
     height: 50vh;
-
     background: url("./images/image2.png") lightgray 50% / cover no-repeat;
 }
 
@@ -153,19 +125,13 @@ body {}
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: left;
     position: absolute;
-
     left: 50%;
-    /* top: 40%; */
     width: 45vw;
-
-    /* scale: 0.9; */
 }
 
 #why2Text1 {
-    /* width: 100%; */
     padding-bottom: 10%;
 }
 
@@ -176,55 +142,43 @@ body {}
 }
 
 #image1 {
-    top: 0.5%;
-    left: 10%;
+    transform: scale(1.2);
+    position: absolute;
+    margin-left: 147.5px;
+    margin-top: -335px;
 }
 
 #why2Text2 {
-    /* width: 95%; */
     padding-top: 10%;
 }
-/* WHY 2 */
 
-
-
-
-/* WHY 3 */
+/* Why 3 Section */
 #linesImageWhy3 {
     position: absolute;
     bottom: 5%;
     right: -22.5%;
     width: 120%;
     height: 120%;
-    /* opacity: 0.8; */
     background: url("./images/lines.png") no-repeat center center;
     background-size: cover;
-
-    
 }
+
 #why3 {
     grid-area: why3;
     position: relative;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     z-index: 10;
-
-    background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0.00) 45%, 
-        rgba(0, 0, 0, 0.69) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45%, rgba(0, 0, 0, 0.69) 100%);
 }
 
 #why3Image {
     position: absolute;
     left: 55%;
-    /* top: 50%; */
     width: 42.5vw;
     height: 50vh;
-
     background: url("./images/image3.png") lightgray 50% / cover no-repeat;
 }
 
@@ -232,19 +186,13 @@ body {}
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: left;
     position: absolute;
-
     right: 50%;
-    /* top: 40%; */
     width: 45vw;
-
-    /* scale: 0.9; */
 }
 
 #why3Text1 {
-    /* width: 100%; */
     padding-bottom: 10%;
 }
 
@@ -255,43 +203,34 @@ body {}
 }
 
 #image2 {
-    top: 0.5%;
-    left: 10%;
-    transform: rotate(180deg);
+    transform: scale(1.2) rotate(180deg);
+    position: absolute;
+    margin-left: 147.5px;
+    margin-top: -335px;
 }
 
 #why3Text2 {
-    /* width: 95%; */
     padding-top: 10%;
 }
-/* WHY 3 */
 
-
-/* FOOTER */
+/* Footer */
 #linesImageFooter {
     position: absolute;
-
     width: 200%;
     height: 200%;
-
     opacity: 0.6;
     background: url("./images/lines.png") no-repeat center center;
     background-size: cover;
-
     top: -10rem;
     left: -5rem;
 }
 
 #footerPage {
-    z-index: 5;
     grid-area: footer;
     position: relative;
+    z-index: 5;
     overflow-y: hidden;
-
-
     margin-bottom: -6.5rem;
     padding-bottom: 7.5rem;
-
     background: rgba(0, 0, 0, 0.69);
 }
-/* FOOTER */
