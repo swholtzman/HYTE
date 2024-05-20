@@ -1,0 +1,224 @@
+:root {
+    /* You can define CSS variables here if needed */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* You can add styles for the body if needed */
+}
+
+#mentorsGrid {
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 350vh 100vh;
+    grid-template-areas:
+        "landing"
+        "mentors"
+        "footer";
+}
+
+/* LANDING SECTION STARTS */
+#landingSection {
+    grid-area: landing;
+}
+
+#landingContent {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: auto;
+}
+
+#landingText {
+    width: 50vw;
+
+    margin-left: 4rem;
+    margin-top: 30vh;
+}
+
+#landingHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#our {
+    margin-bottom: -1rem;
+    color: #CDCDCD;
+    text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+    font-size: 60pt;
+}
+
+#mentors {
+    color: #D9D9D9;
+    text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+    font-size: 65pt;
+}
+
+#landingParagraph {
+    width: 90%;
+    margin-top: 2rem;
+    color: #FFF;
+    font-size: 26pt;
+}
+
+#landingCaption {
+    /* Add styles if needed */
+}
+
+#landingImage {
+    z-index: -100;
+    position: absolute;
+
+    left: 5%;
+    bottom: -70%;
+
+    filter: saturate(80%) brightness(60%);
+    opacity: 0.8;
+}
+
+#landingGraphic {
+    /* Add styles if needed */
+}
+
+/* LANDING SECTION ENDS */
+
+/* MENTORS MAIN SECTION STARTS */
+#mentorsMain {
+    margin-top: 15vh;
+    grid-area: mentors;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#mentorsContent {
+    width: 85%;
+    height: auto; 
+}
+
+#cardsSection1,
+#cardsSection2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.mentorCard {
+    height: 400px;
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.mentorImage {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.cardText {}
+
+.mentorName {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 16pt;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15rem;
+
+    margin-top: 1rem;
+}
+
+/* .mentorFirstName,
+.mentorLastName {
+    color: #FFF;
+    font-size: 18pt;
+} */
+
+
+.mentorBio {
+    height: 2.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: -0.5rem;
+
+    font-size: 14pt;
+}
+
+.mentorLine {
+    width: 100%;
+}
+
+.mentorLinkedIn {
+    margin-top: 0.5rem;
+}
+
+.linkedInLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    text-decoration: none;
+}
+
+.linkedInLogo {
+    padding: 0;
+    margin: 0;
+}
+
+.linkedInConnect {
+    color: rgba(255, 255, 255, 0.70);
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 10pt;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.1125rem;
+
+    margin-bottom: 5px;
+}
+
+.dividerDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.dividerSVG {
+    transform: scale(1.2);
+}
+
+.dividerImage {
+    transform: scale(0.28);
+    margin-top: -39.5rem;
+    margin-bottom: -24rem;
+    padding: 0;
+}
+
+
+/* FOOTER SECTION */
+#footerPage {
+    grid-area: footer;
+}

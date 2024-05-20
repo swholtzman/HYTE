@@ -27,6 +27,10 @@ body {
     height: 120vh;
     object-fit: cover;
     position: fixed;
+
+    /* filter: saturate(200%) brightness(150%) contrast(80%); */
+    filter: contrast(110%) brightness(80%);
+    
 }
 
 .black-text {
