@@ -75,11 +75,11 @@ body {
 #hyteText {
     font-size: 110pt;
     font-style: italic;
-    transform: skewX(-15deg);
+    /* transform: skewX(-15deg); */
     font-family: "Anton", sans-serif;
     font-weight: 400;
     width: 40vw;
-    padding-left: 15px;
+    /* padding-left: 15px; */
 }
 
 .paragraph {

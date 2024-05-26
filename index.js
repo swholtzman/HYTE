@@ -1,8 +1,12 @@
 // HYTE/index.js
 const express = require('express');
 const path = require('path');
+const favicon = require('serve-favicon');
 const app = express();
 const port = 3000;
+
+// Serve the favicon from the 'Main/images' directory
+app.use(favicon(path.join(__dirname, 'Main', 'images', 'favicon.png')));
 
 // Serve static files from the 'HYTE' directory
 app.use(express.static(path.join(__dirname)));

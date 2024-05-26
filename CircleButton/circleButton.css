@@ -1,132 +1,317 @@
 :root {
-    --clr-neon-pink: hsl(320, 100%, 50%);
-    --clr-neon-blue: hsl(195, 100%, 50%);
+  --clr-neon-pink: hsl(320, 100%, 50%);
+  --clr-neon-blue: hsl(195, 100%, 50%);
 
-    --clr-blue-glow: hsl(180, 100%, 50%);
-    --clr-pink-glow: hsl(317, 100%, 50%);
+  --clr-blue-glow: hsl(180, 100%, 50%);
+  --clr-pink-glow: hsl(317, 100%, 50%);
 
-    --clr-clear-blue: hsla(238, 100%, 50%, 0.125);
-    --clr-clear-pink: hsla(297, 100%, 50%, 0.125);
+  --clr-clear-blue: hsla(238, 100%, 50%, 0.125);
+  --clr-clear-pink: hsla(297, 100%, 50%, 0.125);
 
-    --clr-whiteBlue: hsl(240, 100%, 94%);
+  --clr-whiteBlue: hsl(240, 100%, 94%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {}
 
 .circularButton {
-    z-index: 150;
-    animation: bobbingAnimation 8s infinite ease-in-out;
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-    overflow: visible;
-  }
+  z-index: 150;
+
+  animation: bobbingAnimation 8s infinite ease-in-out;
+  -webkit-animation: bobbingAnimation 8s infinite ease-in-out; 
   
-  .buttonText {
-    font-family: "montserrat", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 18pt;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 15%;
-    left: 84%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    overflow: visible;
-    z-index: 2;
-    transition: 300ms ease-in-out;
-    transition-delay: 0.2s;
-    filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
-  }
+  position: relative;
+  display: inline-block;
+
+  text-decoration: none;
+  color: inherit;
+  overflow: visible;
+}
+
+:root {
+  --clr-neon-pink: hsl(320, 100%, 50%);
+  --clr-neon-blue: hsl(195, 100%, 50%);
+
+  --clr-blue-glow: hsl(180, 100%, 50%);
+  --clr-pink-glow: hsl(317, 100%, 50%);
+
+  --clr-clear-blue: hsla(238, 100%, 50%, 0.125);
+  --clr-clear-pink: hsla(297, 100%, 50%, 0.125);
+
+  --clr-whiteBlue: hsl(240, 100%, 94%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {}
+
+.circularButton {
+  z-index: 150;
+
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  overflow: visible;
+
+  animation: bobbingAnimation 8s infinite ease-in-out;
+  -webkit-animation: bobbingAnimation 8s infinite ease-in-out;
+}
+
+.buttonText {
+  z-index: 2;
+
+  font-family: "montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18pt;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  position: absolute;
+  top: 15%;
+  left: 84%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  white-space: nowrap;
+  overflow: visible;
+
+  transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+
+  filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
+  -webkit-filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
+}
+
+.arrow {
+  z-index: 1;
+
+  position: absolute;
+  top: 43%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+
+  filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
+  -webkit-filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
+}
+
+.circle {
+  z-index: 0;
+
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  opacity: 0.5;
+  border-radius: 50%;
+  background: transparent; /* Ensure background is transparent */
   
-  .arrow {
-    position: absolute;
-    top: 43%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    transform: scale(0.9);
-    transition: 300ms ease-out;
-    filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
-  }
+  box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+  -webkit-box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+}
+
+.circularButton:hover .circle {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
   
-  .circle {
-    z-index: 0;
-    transform: scale(1.3);
-    opacity: 0.5;
-    border-radius: 50%;
-    background: transparent; /* Ensure background is transparent */
-    box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
-    transition: 300ms ease-out;
-  }
-  
-  .circularButton:hover .circle {
-    transform: scale(1.4);
-    background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
-    box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
-    transition: 500ms ease-out;
-  }
-  
-  .circularButton:hover .arrow {
-    left: 50%;
-    transition: 300ms ease-out;
-  }
-  
-  .circularButton:hover .buttonText {
-    left: 90%;
-    transition: 300ms ease-out;
-    transition-delay: 0.2s;
-  }
-  
-  @keyframes bobbingAnimation {
-    0%,
-    100% {
+  box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+
+  transition: 500ms ease-out;
+  -webkit-transition: 500ms ease-out;
+}
+
+.circularButton:hover .arrow {
+  left: 50%;
+
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+}
+
+.circularButton:hover .buttonText {
+  left: 90%;
+
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+}
+
+@keyframes bobbingAnimation {
+  0%, 100% {
       transform: translateY(0);
-    }
-    50% {
+      -webkit-transform: translateY(0);
+  }
+  50% {
       transform: translateY(-5px);
-    }
+      -webkit-transform: translateY(-5px);
   }
+}
+
+#whitePageButton {
+  padding-left: 65vw;
+  margin-top: -10vh;
+}
+
+#whiteButtonText {
+  margin-right: 1rem;
+}
+
+#whitePageButton .buttonText {
+  color: white;
+  padding-right: 2rem;
+}
+
+#whitePageButton .arrow path {
+  fill: white;
+}
+
+#whitePageButton .circle {
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  opacity: 0.5;
+  border-radius: 50%;
+  background: transparent; /* Ensure background is transparent */
   
-  #whitePageButton {
-    padding-left: 65vw;
-    margin-top: -10vh;
+  box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+  -webkit-box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+}
+
+#whitePageButton .circularButton:hover .circle {
+  transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
+  
+  box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+
+  transition: 500ms ease-out;
+  -webkit-transition: 500ms ease-out;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 43%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); /* WebKit equivalent */
+  z-index: 1;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9); /* WebKit equivalent */
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+  filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd);
+  -webkit-filter: drop-shadow(10px 10px 20px #8a8a8a, -10px -10px 20px #dddddd); /* WebKit equivalent */
+}
+
+.circle {
+  z-index: 0;
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3); /* WebKit equivalent */
+  opacity: 0.5;
+  border-radius: 50%;
+  background: transparent; /* Ensure background is transparent */
+  box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+  -webkit-box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff; /* WebKit equivalent */
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+}
+
+.circularButton:hover .circle {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4); /* WebKit equivalent */
+  background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
+  box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff; /* WebKit equivalent */
+  transition: 500ms ease-out;
+  -webkit-transition: 500ms ease-out; /* WebKit equivalent */
+}
+
+.circularButton:hover .arrow {
+  left: 50%;
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+}
+
+.circularButton:hover .buttonText {
+  left: 90%;
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s; /* WebKit equivalent */
+}
+
+@keyframes bobbingAnimation {
+  0%,
+  100% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0); /* WebKit equivalent */
   }
-  
-  #whiteButtonText {
-    margin-right: 1rem;
+  50% {
+      transform: translateY(-5px);
+      -webkit-transform: translateY(-5px); /* WebKit equivalent */
   }
-  
-  #whitePageButton .buttonText {
-    color: white;
-    padding-right: 2rem;
-  }
-  
-  #whitePageButton .arrow path {
-    fill: white;
-  }
-  
-  #whitePageButton .circle {
-    transform: scale(1.6);
-    opacity: 0.5;
-    border-radius: 50%;
-    background: transparent; /* Ensure background is transparent */
-    box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
-    transition: 300ms ease-out;
-  }
-  
-  #whitePageButton .circularButton:hover .circle {
-    transform: scale(1.7);
-    background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
-    box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
-    transition: 500ms ease-out;
-  }
-  
+}
+
+#whitePageButton {
+  padding-left: 65vw;
+  margin-top: -10vh;
+}
+
+#whiteButtonText {
+  margin-right: 1rem;
+}
+
+#whitePageButton .buttonText {
+  color: white;
+  padding-right: 2rem;
+}
+
+#whitePageButton .arrow path {
+  fill: white;
+}
+
+#whitePageButton .circle {
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6); /* WebKit equivalent */
+  opacity: 0.5;
+  border-radius: 50%;
+  background: transparent; /* Ensure background is transparent */
+  box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff;
+  -webkit-box-shadow: 19px 19px 38px #a4a4a4, -19px -19px 38px #ffffff; /* WebKit equivalent */
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+}
+
+#whitePageButton .circularButton:hover .circle {
+  transform: scale(1.7);
+  -webkit-transform: scale(1.7); /* WebKit equivalent */
+  background: linear-gradient(white, var(--clr-clear-blue), var(--clr-clear-pink));
+  box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 7px 7px 14px #a4a4a4, -7px -7px 14px #ffffff; /* WebKit equivalent */
+  transition: 500ms ease-out;
+  -webkit-transition: 500ms ease-out; /* WebKit equivalent */
+}

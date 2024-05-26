@@ -17,7 +17,7 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 350vh 100vh;
+    grid-template-rows: 100vh auto 100vh;
     grid-template-areas:
         "landing"
         "mentors"

@@ -20,22 +20,22 @@ body {
     color: white;
 }
 
-/* .followerPage {
-    display: none;
-} */
+#footerContent {
+    margin-top: 4rem;
+}
 
 /* HYTE BRANDING */
-#footerPage h3 {
-    padding-top: 6rem;
-    padding-left: 8rem;
-
-    font-size: 80pt;
+#footerLogo {
+    font-size: 100pt;
     transform: skewX(-15deg);
     font-family: "anton", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-/*  */
+
+#footerBranding {
+    margin-left: 7rem;
+}
 
 /* LINKS */
 #footerPage a {
@@ -43,20 +43,15 @@ body {
     color: white;
     z-index: 1000;
 }
-/*  */
 
-/* GENERAL PAGE SETUP */
-#footerPage {
-    height: 110vh;
-    z-index: 100;
+#topRowFooter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    background: none;
+
 }
 
-/* #clickableFooter {
-    z-index: 9999;
-} */
-/*  */
 
 /* CONTACT LINK BEGINS*/
 #contactInfo {
@@ -87,15 +82,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* #email:hover {
-    margin-left: 1rem;
-
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-
-    transition: 500ms ease;
-
-    background-size: 0% 2px, 100% 2px;
-} */
 /* CONTACT LINK ENDS */
 
 /* FOOTER LINK ROW BEGINS */
@@ -107,6 +93,13 @@ body {
 #followUs {
     text-transform: uppercase;
     padding-bottom: 1rem;
+}
+
+.linkTitle {
+    padding-bottom: 0.75rem;
+
+    font-size: 14pt;
+    text-transform: uppercase;
 }
 
 #footerLinks {
@@ -246,6 +239,7 @@ body {
     transform: scale(0.7);
     transition: 0.5s ease-out;
 }
+
 /* FOOTER LINK ROW ENDS */
 
 
@@ -256,14 +250,14 @@ body {
 
     color: var(--clr-links);
 }
+
 /*  */
 
 
 /* BUTTON CUSTOMS FOR LANDING PAGE */
 #footerButton {
-    position: absolute;
-
-    left: 50%;
+    margin-left: 35vw;
+    margin-top: 20vh;
     transform: scale(1.5);
 }
 
@@ -304,4 +298,155 @@ body {
 
     transition: 500ms ease-out;
 }
+
 /* BUTTON CUSTOMIZATION ENDS */
+
+
+/* MOBILE DEVICES */
+/* Samsung Galaxy S21: 360 x 800 pixels */
+@media only screen and (max-width: 360px) {}
+
+/* Apple iPhone SE: 375 x 667 pixels */
+@media only screen and (max-width: 375px) {}
+
+/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
+@media only screen and (max-width: 390px) {}
+
+/* Apple iPhone XR/11: 414 x 896 pixels */
+@media only screen and (max-width: 414px) {
+
+
+    #footerPage {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #footerContent {
+        width: 90%;
+        height: 100%;
+
+        margin-left: 2rem;
+    }
+
+    #footerBranding {
+        margin: 0;
+    }
+
+    #topRowFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 4rem;
+    }
+
+    #footerLogo {
+        font-size: 60pt;
+    }
+
+    #clickableFooter {
+        padding: 0;
+    }
+
+    #footerButton {
+        transform: scale(0.6);
+        margin: 0;
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    #contactInfo {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+        padding: 0;
+
+    }
+
+    #footerMore {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linkTitle {
+        font-size: 12pt;
+    }
+
+    #footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: 1rem;
+
+    }
+
+    #program {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 0rem;
+    }
+
+
+    #followInfo {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #footerIconButtons {
+        transform: scale(0.6);
+        display: flex;
+
+        margin-left: -4rem;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #established {
+        margin-top: 1rem;
+    }
+
+    #estInfo {
+        font-size: 8pt;
+    }
+
+}
+
+/* Tablets */
+/* Apple iPad (portrait): 768 x 1024 pixels */
+@media only screen and (max-width: 768px) {}
+
+/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
+@media only screen and (max-width: 800px) {}
+
+/* Apple iPad (landscape): 1024 x 768 pixels */
+@media only screen and (max-width: 1024px) {}
+
+
+
+/* SMALL LAPTOPS */
+/* MacBook Air 13-inch: 1440 x 900 pixels */
+@media only screen and (max-width: 1440px) {}
+
+/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
+@media only screen and (max-width: 2560px) {}
+
+
+/* DESKTOPS */
+/* Full HD: 1920 x 1080 pixels */
+@media only screen and (max-width: 2560px) {}
+
+/* 2K: 2560 x 1440 pixels */
+@media only screen and (max-width: 2560px) {}
+
+/* 4K: 3840 x 2160 pixels */
+@media only screen and (max-width: 2560px) {}
