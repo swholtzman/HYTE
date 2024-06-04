@@ -160,7 +160,7 @@ body {
 .links {
     justify-content: flex-end;
 
-    margin-right: -1rem;
+    /* margin-right: -1rem; */
     font-size: 10.7pt;
     letter-spacing: 0.5rem;
     color: var(--clr-links);

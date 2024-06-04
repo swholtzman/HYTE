@@ -1,0 +1,111 @@
+_______________________________________
+_______________________________________
+
+    @TODO:
+_______________________________________
+
+    -----------------------------------
+
+    Scaling:
+    -----------------------------------
+    - Mobile | Tablet | Laptop | Desktop
+        - Programs Page
+    - Mobile (360 - 414)
+        - Main 
+            - nav page link underline hover
+            - landing page content reposition 
+                - Button not centered
+                - Logo and description not aligned
+                - space from top is too large 
+                - just copy the figma and use a lot of flex boxes (html and css areas both)
+                    - rework landing html?
+        - Mentors
+            - Bio/Image scaling
+            - Container width
+            - Landing page?
+        - Programs 
+    - Tablet (415 - )
+        - Programs
+        - 
+    - Laptop
+        - Programs
+    - Desktop:
+        - All 
+
+    -----------------------------------
+
+    Content:
+    -----------------------------------
+    - Programs Page
+        - add button + graphic to landing 
+        - centerpiece graphics to each program
+    - Our Founder
+        - New Pic for Bio 
+        - Dim bio lines Image
+    - Hamburger Menu
+    - General
+        - graphic button with frame could be rebuikt to be similar to the dividers from why hyte
+    - Add loading animation
+    - Add cursor follower (Hyperplexed on YouTube) 
+_______________________________________
+_______________________________________
+
+_______________________________________
+_______________________________________
+    
+    General Notes:
+_______________________________________
+    -----------------------------------
+    Aspect Ratios:
+    -----------------------------------
+        *** DESKTOP ***
+        - 3840 x 2160 (4K)
+        - 2560 x 1440 (2K)
+        - 1920 x 1080 (Full HD)
+    -----------------------------------
+        *** LAPTOPS - SMALL ***
+        - 2560 x 1600 (Scaled Laptop)
+        - 1440 x 900 (Laptop)
+    -----------------------------------
+        *** TABLET ***
+        - 800 x 1280 (Galexy Tablet)
+        - 768 x 1024 (Portrait Tablet)
+    -----------------------------------
+        *** MOBILE ***
+        - 414 x 896 (Large Mobile)
+        - 390 x 844 (Standard Mobile)
+        - 375 x 667 (Small Mobile)
+        - 360 x 800 (Smaller Mobile)
+    -----------------------------------
+_______________________________________
+_______________________________________
+
+
+
+
+_______________________________________
+_______________________________________
+
+    Session Notes (Dated)
+_______________________________________
+    -----------------------------------
+    Tuesday June 4th
+    -----------------------------------
+    Discovered:
+    - main.css 
+        - underlines on nav page need to be fixed
+            - extend too far when hovered while in small screen width
+        - desktop scalability
+            - sectional heights, font size, 
+            - full screen and halved 
+    Completed:
+    - Created session-notes.txt
+    Notes:
+    - Desktop scalability is not good, but not breakingly bad
+    - Focus on setting each screen to be mobile AND TABLET scalable asap
+    -----------------------------------
+
+    -----------------------------------
+    __ June ___
+    -----------------------------------
+    

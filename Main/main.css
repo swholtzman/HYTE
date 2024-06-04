@@ -27,7 +27,7 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh 100vh 100vh 140vh auto;
+    grid-template-rows: 100vh 100vh auto 140vh auto;
     grid-template-areas:
         "landing"
         "navigation"
@@ -1147,17 +1147,5 @@ h1 {
 
 /* Samsung Galaxy S21: 360 x 800 pixels */
 @media only screen and (max-width: 360px) {}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
