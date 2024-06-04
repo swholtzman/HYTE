@@ -5,7 +5,7 @@
     <meta lang="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>HYTE Founder Page</title>
+    <title>Our Founder</title>
 
     <!-- FAVICON -->
     <link
@@ -84,7 +84,7 @@
     <!-- FULL PAGE GRID -->
     <div id="pageGrid">
       <!-- STICKY FRAME BEGINS -->
-      <div class="followerPage" id="followerPage">
+      <section class="followerPage" id="followerPage">
         <!-- NAV BAR -->
         <nav class="primary-navigation">
           <!-- LEFT SIDE OF NAV -->
@@ -95,7 +95,9 @@
 
           <!-- RIGHT SIDE OF NAV BAR -->
           <div id="rightNav">
-            <a id="ourPrograms" href="#">our programs</a>
+            <a id="programsNav" href="../Programs/programs.html"
+              >our programs</a
+            >
             <a
               id="registerNow"
               href="https://forms.gle/gkz4UE41K9qv3tDd7"
@@ -124,7 +126,7 @@
         <div class="slogan">
           <p>expand your horizons</p>
         </div>
-      </div>
+      </section>
       <!-- STICKY FRAME ENDS -->
 
       <!-- LANDING CLIP -->
@@ -142,43 +144,52 @@
 
       <!-- FOUNDER LANDING BEGINS -->
       <section id="founderLanding">
-        <img class="founderLandingImage" src="./images/Yasmin Speaks.png" />
-        <div id="founderTitle">
-          <p id="our">Our</p>
-          <h3 id="founder">FOUNDER</h3>
+        <div id="landingContent">
+          <div id="founderTitle">
+            <p id="our">OUR</p>
+            <h3 id="founder">FOUNDER</h3>
+          </div>
+          <img class="founderLandingImage" src="./images/Yasmin Speaks.png" />
         </div>
       </section>
       <!-- FOUNDER LANDING ENDS -->
 
       <!-- FOUNDER PAGE 2 BEGINS -->
       <section id="founderPage2">
-        <img
-          id="image2"
-          class="linesImage"
-          src="./images/lines.png"
-          alt="lines"
-        />
-        <img class="headshot" src="./images/headshot.png" alt="Yasmin Dibai" />
-        <div id="page2Glass">
-          <div id="titlePiece">
-            <h3 id="name">Yasmin Dibai</h3>
-            <p id="role">Founder & Head Instructor</p>
-          </div>
-          <div id="founderAboutMe">
-            <p id="paragraph1" class="aboutMe">
-              Growing up, my parents instilled an unbreakable confidence within
-              me and taught me the work ethic needed to reach my goals.
-            </p>
-            <p id="paragraph2" class="aboutMe">
-              It wasn’t until high school that I was made aware of the notorious
-              reputation of rigorous tech careers such as engineering. The
-              confidence that my parents had built within me made me into a
-              strong student and an advocate for youth to pursue STEM.
-            </p>
-            <p id="paragraph3" class="aboutMe">
-              HYTE is a vessel for me to spread that confidence to more
-              students, in hopes of encouraging them to pursue a career in tech.
-            </p>
+        <div id="founderOuterContent">
+          <div id="founderContent">
+            <img
+              class="headshot"
+              src="./images/headshot.png"
+              alt="Yasmin Dibai"
+            />
+            <div id="founderInnerContent">
+              <div id="page2Glass">
+                <div id="titlePiece">
+                  <h3 id="name">Yasmin Dibai</h3>
+                  <p id="role">Founder & Head Instructor</p>
+                </div>
+                <div id="founderAboutMe">
+                  <p id="paragraph1" class="aboutMe">
+                    Growing up, my parents instilled an unbreakable confidence
+                    within me and taught me the work ethic needed to reach my
+                    goals.
+                  </p>
+                  <p id="paragraph2" class="aboutMe">
+                    It wasn’t until high school that I was made aware of the
+                    notorious reputation of rigorous tech careers such as
+                    engineering. The confidence that my parents had built within
+                    me made me into a strong student and an advocate for youth
+                    to pursue STEM.
+                  </p>
+                  <p id="paragraph3" class="aboutMe">
+                    HYTE is a vessel for me to spread that confidence to more
+                    students, in hopes of encouraging them to pursue a career in
+                    tech.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -269,7 +280,7 @@
             <div id="followInfo">
               <p id="followUs">Follow Us</p>
               <div id="footerIconButtons">
-                <a class="iconLink" href="#">
+                <a class="iconLink" href="https://www.instagram.com/hyte.program?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                   <button id="iconButton1">
                     <svg
                       id="icon"
@@ -286,7 +297,7 @@
                     </svg>
                   </button>
                 </a>
-                <a class="iconLink" href="#">
+                <a class="iconLink" href="https://www.linkedin.com/company/hyte-horizons-program/" target="_blank">
                   <button id="iconButton2">
                     <svg
                       id="icon"
@@ -347,6 +358,5 @@
     </div>
 
     <!-- IMPORTED JAVASCRIPT -->
-    <script src="../hyteTestPage/test.js"></script>
   </body>
 </html>

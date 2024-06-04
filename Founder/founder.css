@@ -6,20 +6,25 @@
     box-sizing: border-box;
 }
 
+img {
+    pointer-events: none;
+}
+
 body {}
-
-
 
 #pageGrid {
     display: grid;
-    /* This line is essential for enabling grid layout */
-    grid-template-columns: 100vw;
-    grid-template-rows: 100vh 100vh 100vh;
+    grid-template-columns: 1fr; /* Use 1fr for flexibility */
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "landing"
         "founder2"
         "footer";
+    width: 100%; /* Ensure the grid container takes full width */
 
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.25);
 }
 
 #image1 {
@@ -29,57 +34,75 @@ body {}
     border-radius: 50%;
     top: 30%;
     right: 65%;
-
 }
 
 /* LANDING AREA */
 #founderLanding {
     grid-area: landing;
 
-    display: flex;
-    flex-direction: row;
-
     position: relative;
-background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 
+    padding: 4rem;
+    padding-top: 8rem;
+
+    margin-bottom: 10rem;
+}
+
+#landingContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #founderTitle {
-    position: absolute;
-    top: 60vh;
-    left: 5%;
+    margin-top: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #our {
-    font-size: 36pt;
-    margin-bottom: -15px;
-
+    margin-bottom: -1rem;
+    color: #CDCDCD;
+    text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+    font-size: 60pt;
 }
 
+
 #founder {
-    font-size: 80pt;
+    font-size: 65pt;
     font-weight: 300;
-    margin-left: -10px;
 }
 
 .founderLandingImage {
-    position: absolute;
-    transform: scale(0.8);
-    height: 80%;
-    width: 62.5%;
-    left: 40%;
-    top: 7.5%;
-
+    height: 65vh;
+    width: 50vw;
     border-radius: 5px;
-
     object-fit: cover;
 }
 
-/* LANDING AREA */
-
 /* PAGE 2 */
+#founderPage2 {
+    grid-area: founder2;
+}
+
+#founderContent {
+    margin-bottom: 4rem;
+}
+
+#founderInnerContent {
+    width: auto;
+    height: auto;
+
+    background: url("../Main/images/lines\(normal\).png") no-repeat center center;
+    background-size: cover;
+
+}
+
 .linesImage {
     position: absolute;
     scale: 0.225;
@@ -87,79 +110,60 @@ background: rgba(0, 0, 0, 0.25);
     filter: contrast(1.1) saturate(1.1) brightness(1.1) hue-rotate(360deg);
     -webkit-mask-image: radial-gradient(circle,
             rgba(0, 0, 0, 1) 50%,
-            /* Fully opaque within the inner 85% */
             rgba(0, 0, 0, 0.2) 65%,
-            rgba(0, 0, 0, 0) 100%
-            /* Fully transparent at the outer 15% */
-        );
+            rgba(0, 0, 0, 0) 100%);
     mask-image: radial-gradient(circle,
             rgba(0, 0, 0, 1) 50%,
-            /* Fully opaque within the inner 85% */
             rgba(0, 0, 0, 0.2) 65%,
-            rgba(0, 0, 0, 0) 100%
-            /* Fully transparent at the outer 15% */
-        );
+            rgba(0, 0, 0, 0) 100%);
     -webkit-mask-size: cover;
     mask-size: cover;
 }
 
 #image2 {
     z-index: -10;
-    transform: rotate(44deg);
-
-    transform: scale(4);
+    transform: rotate(44deg) scale(4); /* Combine transformations */
     left: 30%;
     top: 15%;
-
     opacity: 0.1;
 }
 
-#founderPage2{
+#founderPage2 {
     grid-area: founder2;
     position: relative;
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
-    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 }
 
-.headshot{
+.headshot {
     z-index: 10;
     position: absolute;
     transform: scale(0.5);
     right: 65%;
     bottom: 20%;
     border-radius: 20px;
-
     height: 650px;
     width: 450px;
-
     object-fit: cover;
-
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 #page2Glass {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-
     width: 70vw;
-    height: 80vh;
-    
+    height: auto;
     background: rgba(255, 255, 255, 0.01);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
 }
 
 #titlePiece {
@@ -179,11 +183,10 @@ background: rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     text-align: left;
-    justify-content: space-between; 
-
-    width: 52rem;
-
-    padding-left: 10rem;
+    justify-content: space-between;
+    width: 52vw;
+    padding-left: 7.5vw;
+    margin-bottom: 6rem;
     gap: 2rem;
 }
 
@@ -195,22 +198,302 @@ background: rgba(0, 0, 0, 0.25);
 #paragraph2 {}
 #paragraph3 {}
 
-/* PAGE 2 */
-
-
 /* FOOTER PAGE */
 #footerPage {
     grid-area: footer;
+    height: auto;
     z-index: 0;
-
-    background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 }
-/* FOOTER PAGE */
 
 /* FOLLOWER PAGE */
 .followerPage {
     z-index: 1;
 }
-/* FOLLOWER PAGE */
+
+@media only screen and (max-width: 1300px) {
+    #our {
+        font-size: 50pt;
+    }
+    
+    
+    #founder {
+        font-size: 55pt;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #founderLanding {
+        grid-area: landing;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        padding: 4rem;
+        padding-top: 4rem;
+    }
+
+    #landingContent {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 4rem;
+    }
+    
+    #founderTitle {
+        margin-top: 10vh;
+    }
+    
+    #our {
+        margin-bottom: -1rem;
+        color: #CDCDCD;
+        text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+        font-size: 60pt;
+    }
+    
+    
+    #founder {
+        font-size: 65pt;
+        font-weight: 300;
+    }
+    
+    .founderLandingImage {
+        height: 60vh;
+        width: 70vw;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #founderTitle {
+        margin-top: 10vh;
+    }
+    
+    #founderOuterContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        width: 100vw;
+    }
+
+    #founderContent {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+    }
+
+    #founderPage2 {
+        grid-area: founder2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+    }
+    
+    .headshot {
+        position: static;
+        transform: scale(0.5);
+        height: 650px;
+        width: 450px;
+
+        padding: 0;
+        margin: 0;
+
+        margin-bottom: -12rem;
+    }
+    
+    #page2Glass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw; 
+    }
+    
+    #name {
+        font-size: 26pt;
+    }
+    
+    #founderAboutMe {
+        width: 70vw;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+
+    /* FOOTER EDITS, DO NOT CHANGE */
+
+    #footerPage {
+        overflow: hidden;
+
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #footerContent {
+        width: 80%;
+        height: 100%;
+    }
+
+    #footerBranding h3 {
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+
+    #footerBranding {
+        margin: 0;
+    }
+
+    #topRowFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 10vw;
+
+        margin-top: 0rem;
+    }
+
+    #footerLogo {
+        font-size: 100pt;
+        padding-top: 0rem;
+    }
+
+    #clickableFooter {
+        padding: 0;
+    }
+
+    #footerButton {
+        margin: 0;
+        /* padding-bottom: 6rem; */
+        padding: 0;
+        padding-top: 6rem;
+    }
+
+    #contactInfo {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+        padding: 0;
+
+    }
+
+    #footerMore {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linkTitle {
+        font-size: 14pt;
+    }
+
+    #footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 20vw;
+    }
+
+    #program {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 0rem;
+    }
+
+
+    #followInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #footerIconButtons {
+        transform: scale(0.6);
+        display: flex;
+
+        margin-left: -4rem;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #established {
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    #estInfo {
+        font-size: 12pt;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 760px) {
+    #page2Glass {
+        width: 100vw;
+    }
+    
+    #founderAboutMe {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #founderLanding {
+        padding: 2rem;
+        margin: 0;
+    }
+    
+    #landingContent {
+        margin: 0;
+    }
+
+    
+    #our {
+        font-size: 40pt;
+    }
+    
+    #founder {
+        font-size: 45pt;
+    }
+    
+    .founderLandingImage {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    #our {
+        font-size: 35pt;
+    }
+    
+    #founder {
+        font-size: 40pt;
+    }
+}

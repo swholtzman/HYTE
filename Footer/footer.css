@@ -301,19 +301,38 @@ body {
 
 /* BUTTON CUSTOMIZATION ENDS */
 
+/* DESKTOPS */
+/* 4K: 3840 x 2160 pixels */
+@media only screen and (max-width: 2560px) {}
 
-/* MOBILE DEVICES */
-/* Samsung Galaxy S21: 360 x 800 pixels */
-@media only screen and (max-width: 360px) {}
+/* 2K: 2560 x 1440 pixels */
+@media only screen and (max-width: 2560px) {}
 
-/* Apple iPhone SE: 375 x 667 pixels */
-@media only screen and (max-width: 375px) {}
+/* Full HD: 1920 x 1080 pixels */
+@media only screen and (max-width: 2560px) {}
 
-/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
-@media only screen and (max-width: 390px) {}
 
-/* Apple iPhone XR/11: 414 x 896 pixels */
-@media only screen and (max-width: 414px) {
+
+/* SMALL LAPTOPS */
+/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
+@media only screen and (max-width: 2560px) {}
+
+/* MacBook Air 13-inch: 1440 x 900 pixels */
+@media only screen and (max-width: 1440px) {}
+
+
+
+/* Tablets */
+/* Apple iPad (landscape): 1024 x 768 pixels */
+@media only screen and (max-width: 1024px) {}
+
+
+
+/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
+@media only screen and (max-width: 800px) {}
+
+/* EXTRA */
+@media only screen and (max-width: 960px) {
 
 
     #footerPage {
@@ -324,10 +343,10 @@ body {
     }
 
     #footerContent {
-        width: 90%;
+        width: 80%;
         height: 100%;
 
-        margin-left: 2rem;
+        margin-left: 6rem;
     }
 
     #footerBranding {
@@ -337,14 +356,14 @@ body {
     #topRowFooter {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
-        gap: 4rem;
+        gap: 25vw;
     }
 
     #footerLogo {
-        font-size: 60pt;
+        font-size: 100pt;
     }
 
     #clickableFooter {
@@ -352,7 +371,7 @@ body {
     }
 
     #footerButton {
-        transform: scale(0.6);
+        transform: scale(0.8);
         margin: 0;
         margin-top: 2rem;
         padding: 0;
@@ -372,17 +391,16 @@ body {
     }
 
     .linkTitle {
-        font-size: 12pt;
+        font-size: 14pt;
     }
 
     #footerLinks {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
 
-        gap: 1rem;
-
+        gap: 20vw;
     }
 
     #program {
@@ -412,41 +430,88 @@ body {
     }
 
     #established {
-        margin-top: 1rem;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
     }
 
     #estInfo {
-        font-size: 8pt;
-    }
+        font-size: 12pt;
 
+    }
 }
 
-/* Tablets */
+@media only screen and (min-width: 635px) and (max-width: 960px) {
+    #clickableFooter {
+        transform: scale(1.5);
+    }
+
+    #topRowFooter {
+        margin-top: 2rem;
+    }
+}
+/* EXTRA */
+
 /* Apple iPad (portrait): 768 x 1024 pixels */
 @media only screen and (max-width: 768px) {}
 
-/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
-@media only screen and (max-width: 800px) {}
 
-/* Apple iPad (landscape): 1024 x 768 pixels */
-@media only screen and (max-width: 1024px) {}
+/* EXTRA */
+@media only screen and (max-width: 600px) {
+    #topRowFooter {
+        gap: 15vw;
+    }
 
+    #footerLogo {
+        font-size: 60pt;
+    }
 
+    #footerButton {
+        transform: scale(0.6);
+    }
+}
 
-/* SMALL LAPTOPS */
-/* MacBook Air 13-inch: 1440 x 900 pixels */
-@media only screen and (max-width: 1440px) {}
+/* EXTRA */
 
-/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
-@media only screen and (max-width: 2560px) {}
+/* MOBILE DEVICES */
+/* Apple iPhone XR/11: 414 x 896 pixels */
+@media only screen and (max-width: 414px) {
 
+    #topRowFooter {
+        gap: 20vw;
 
-/* DESKTOPS */
-/* Full HD: 1920 x 1080 pixels */
-@media only screen and (max-width: 2560px) {}
+    }
 
-/* 2K: 2560 x 1440 pixels */
-@media only screen and (max-width: 2560px) {}
+    #footerContent {
+        width: 90%;
+        height: 100%;
 
-/* 4K: 3840 x 2160 pixels */
-@media only screen and (max-width: 2560px) {}
+        margin-left: 2rem;
+    }
+
+    #footerLinks {
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    #footerLogo {
+        font-size: 60pt;
+    }
+
+    .linkTitle {
+        font-size: 12pt;
+    }
+
+    #estInfo {
+        font-size: 10pt;
+    }
+}
+
+/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
+@media only screen and (max-width: 390px) {}
+
+/* Apple iPhone SE: 375 x 667 pixels */
+@media only screen and (max-width: 375px) {}
+
+/* Samsung Galaxy S21: 360 x 800 pixels */
+@media only screen and (max-width: 360px) {}

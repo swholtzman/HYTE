@@ -15,215 +15,221 @@ body {
 /* Full Page Layout */
 #pageGrid {
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 100vh 100vh 100vh 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
         "landing"
         "why2"
         "why3"
         "footer";
+
+    overflow: hidden;
 }
 
-/* Landing Area */
-#linesImageLanding {
-    position: absolute;
-    top: -10%;
-    right: -10%;
-    width: 150%;
-    height: 150%;
-    opacity: 0.5;
-    background: url("./images/lines.png") no-repeat center center;
-    background-size: cover;
-}
-
-.linesImage {
-    position: absolute;
-    scale: 0.225;
-    border-radius: 50%;
-    filter: contrast(1.1) saturate(1.1) brightness(1.1) hue-rotate(360deg);
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 100%);
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-size: cover;
-    mask-size: cover;
-}
-
+/* LANDING PAGE */
 #whyLanding {
-    grid-area: landing;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.69);
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.69) url("./images/lines.png") no-repeat center center;
+    background-size: 150%;
+
+    padding-bottom: 6rem;
+}
+
+
+#landingContent {
+    margin-left: 5vw;
+    margin-top: 20vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 5vw;
 }
 
 #landingText {
+    width: 40vw;
+}
+
+#landingHeader {
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 7.5%;
-    top: 30%;
-    justify-content: left;
-    align-items: left;
+    align-items: flex-start;
+    margin-left: 1rem;
 }
 
 #whyText {
+    margin-bottom: -3rem;
+    margin-left: 1rem;
     color: #CDCDCD;
-    font-family: Montserrat, sans-serif;
-    font-size: 26pt;
-    font-weight: 300;
-    padding-left: 7.5%;
-    margin-bottom: -5%;
+    text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+    font-size: 30pt;
 }
 
 #hyteText {
-    font-size: 110pt;
-    font-style: italic;
-    /* transform: skewX(-15deg); */
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
+    color: #D9D9D9;
+    text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+    font-size: 150pt;
+
     width: 40vw;
-    /* padding-left: 15px; */
+
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    
+    transform: skewX(-15deg);
+    -webkit-transform: skewX(-15deg);
 }
 
 .paragraph {
+    color: #FFF;
     font-size: 16pt;
 }
 
-#whyParagraph {
-    color: #FFF;
-    font-family: Montserrat, sans-serif;
-    font-weight: 300;
-    width: 35vw;
+#landingIntro {
+    margin-top: 2rem;
+    font-size: 18pt;
 }
+
 
 #landingImage {
-    position: absolute;
-    left: 45%;
-    top: 17.5%;
-    width: 50vw;
+    /* background-color: yellow; */
+    width: 45vw;
     height: 60vh;
-    background: url("./images/landing.png") lightgray 50% / cover no-repeat;
+    background: url("./images/landing.png") no-repeat center center;
+    background-size: cover;
 }
+/* LANDING PAGE */
 
-/* Why 2 Section */
-#why2 {
-    grid-area: why2;
+/* WHY HYTE CONTENTS */
+#whyHYTEContent {
     position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0.00) 57.5%);
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    position: relative;
+    background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.69) 10%, 
+    rgba(0, 0, 0, 0.2) 50%, 
+    rgba(0, 0, 0, 0.69) 90%
+    );
+    /* background-color: yellow; */
 }
 
-#why2Image {
-    position: absolute;
-    right: 55%;
-    width: 42.5vw;
-    height: 50vh;
-    background: url("./images/image2.png") lightgray 50% / cover no-repeat;
+/* CONTENT FIRST PAGE */
+#why2 {
+    grid-area: why2;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.sectionOuterContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 4rem;
+}
+
+.sectionInnerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 45vw;
 }
 
 #why2Content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    position: absolute;
-    left: 50%;
-    width: 45vw;
+    
 }
 
-#why2Text1 {
-    padding-bottom: 10%;
+.whyImage {
+    z-index: 10;
+
+    width: 35vw;
+    height: 40vh;
 }
 
-#why2Design {
-    scale: 0.8;
-    margin-right: 100%;
-    justify-self: left;
-}
-
-#image1 {
-    transform: scale(1.2);
-    position: absolute;
-    margin-left: 147.5px;
-    margin-top: -335px;
-}
-
-#why2Text2 {
-    padding-top: 10%;
-}
-
-/* Why 3 Section */
-#linesImageWhy3 {
-    position: absolute;
-    bottom: 5%;
-    right: -22.5%;
-    width: 120%;
-    height: 120%;
-    background: url("./images/lines.png") no-repeat center center;
+#why2Image {
+    background: url("./images/image2.png");  
     background-size: cover;
 }
 
-#why3 {
-    grid-area: why3;
-    position: relative;
+#why2RightContent {
+    
+}
+
+#content1Paragraph1 {}
+
+.graphicDivider {
+    z-index: 0;
+
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45%, rgba(0, 0, 0, 0.69) 100%);
+    background: url("../Main/images/lines\(normal\).png") no-repeat center center;
+    background-size: 300px;
+
+    overflow: visible;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    transform: scale(0.8);
 }
 
-#why3Image {
-    position: absolute;
-    left: 55%;
-    width: 42.5vw;
-    height: 50vh;
-    background: url("./images/image3.png") lightgray 50% / cover no-repeat;
+.linesImage {}
+
+#content1Paragraph2 {}
+/* CONTENT FIRST PAGE */
+
+
+/* CONTENT SECOND PAGE */
+#why3 {
+    grid-area: why3;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    
 }
+
+#linesImageWhy3 {}
 
 #why3Content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    position: absolute;
-    right: 50%;
-    width: 45vw;
 }
 
-#why3Text1 {
-    padding-bottom: 10%;
-}
-
-#why3Design {
-    scale: 0.8;
-    margin-right: 100%;
-    justify-self: left;
-}
-
-#image2 {
-    transform: scale(1.2) rotate(180deg);
-    position: absolute;
-    margin-left: 147.5px;
-    margin-top: -335px;
-}
-
-#why3Text2 {
-    padding-top: 10%;
-}
-
-/* Footer */
-#linesImageFooter {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    opacity: 0.6;
-    background: url("./images/lines.png") no-repeat center center;
+.why3Image {
+    background: url("./images/image3.png");
     background-size: cover;
-    top: -10rem;
-    left: -5rem;
 }
+
+#why3LeftContent {
+    
+}
+
+#content2Paragraph1 {}
+/* CONTENT SECOND PAGE */
+/* WHY HYTE CONTENTS */
+
 
 #footerPage {
     grid-area: footer;
@@ -232,5 +238,270 @@ body {
     overflow-y: hidden;
     margin-bottom: -6.5rem;
     padding-bottom: 7.5rem;
-    background: rgba(0, 0, 0, 0.69);
+    position: relative;
+    background: rgba(0, 0, 0, 0.69) url("./images/lines.png") no-repeat center center;
+    background-size: 200vw;
+}
+
+@media only screen and (min-width: 1750px) {
+
+}
+
+@media only screen and (min-width: 1441px) {
+    #footerPage {
+        background-size: 3000px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    /* #pageGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 100vh 100vh 80vh;
+        grid-template-areas:
+            "landing"
+            "why2"
+            "why3"
+            "footer";
+    } */
+
+    #whyLanding {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        background-size: 200%;
+
+    }
+
+    #landingText {
+        width: 60vw;
+    }
+
+    #landingImage {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 960px) {
+
+
+    #footerPage {
+        overflow: hidden;
+
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #footerContent {
+        width: 80%;
+        height: 100%;
+    }
+
+    #footerBranding h3 {
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+
+    #footerBranding {
+        margin: 0;
+    }
+
+    #topRowFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 2rem;
+
+        margin-top: 0rem;
+    }
+
+    #footerLogo {
+        font-size: 100pt;
+        padding-top: 0rem;
+    }
+
+    #clickableFooter {
+        padding: 0;
+    }
+
+    #footerButton {
+        margin: 0;
+        /* padding-bottom: 6rem; */
+        padding: 0;
+        padding-top: 6rem;
+    }
+
+    #contactInfo {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+        padding: 0;
+
+    }
+
+    #footerMore {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linkTitle {
+        font-size: 14pt;
+    }
+
+    #footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 20vw;
+    }
+
+    #program {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 0rem;
+    }
+
+
+    #followInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #footerIconButtons {
+        transform: scale(0.6);
+        display: flex;
+
+        margin-left: -4rem;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #established {
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    #estInfo {
+        font-size: 12pt;
+
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    #smallscreenImage {
+        display: none;
+    }
+
+    .smallscreenBreak {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #whyLanding {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+        gap: 5vw;
+
+        background-size: 300vw;
+    }
+
+    #landingContent {
+        margin-top: 10vh;
+    }
+
+    #landingText {
+        margin-top: 8rem;
+        margin-left: 1rem;
+    }
+
+    #landingIntro {
+        width: 80vw;
+        font-size: 18pt;
+    }
+
+    .whyImage {
+        width: 70vw;
+    }
+
+    .sectionOuterContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 4rem;
+    }
+
+    .sectionInnerContent {
+        width: 70vw;
+    }
+
+    #fullscreenImage {
+        display: none;
+    }
+
+    #footerPage {
+        background-size: 300vw;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    #landingContent {
+        margin-top: 5vh;
+    }
+
+    #landingHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1rem;
+    }
+    
+    #whyText {
+        font-size: 18pt;
+        margin-bottom: -2rem;
+    }
+    
+    #hyteText {
+        font-size: 100pt;
+    }
+
+    #landingIntro {
+        width: 80vw;
+        font-size: 16pt;
+    }
+
+    #footerPage {
+        background-size: 400vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #estInfo {
+        font-size: 10pt;
+
+    }
 }

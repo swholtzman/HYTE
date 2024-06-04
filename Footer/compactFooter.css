@@ -51,7 +51,9 @@ body {
     z-index: 100;
 
     background: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow: visible;
+    position: relative;
 }
 /*  */
 
@@ -249,10 +251,15 @@ body {
 }
 /*  */
 
+#clickableFooter {
+    overflow: visible;
+}
+
 
 /* BUTTON CUSTOMS FOR FOOTER PAGE */
 #footerButton {
     position: absolute;
+    overflow: visible;
 
     left: 50%;
     transform: scale(1.5);
@@ -298,3 +305,243 @@ body {
 }
 
 /* BUTTON CUSTOMIZATION ENDS */
+
+/* DESKTOPS */
+/* 4K: 3840 x 2160 pixels */
+@media only screen and (max-width: 2560px) {}
+
+/* 2K: 2560 x 1440 pixels */
+@media only screen and (max-width: 2560px) {}
+
+/* Full HD: 1920 x 1080 pixels */
+@media only screen and (max-width: 2560px) {}
+
+
+
+/* SMALL LAPTOPS */
+/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
+@media only screen and (max-width: 2560px) {}
+
+/* MacBook Air 13-inch: 1440 x 900 pixels */
+@media only screen and (max-width: 1440px) {}
+
+
+
+/* Tablets */
+/* Apple iPad (landscape): 1024 x 768 pixels */
+@media only screen and (max-width: 1024px) {}
+
+/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
+@media only screen and (max-width: 960px) {
+
+
+    #footerPage {
+        z-index: 10;
+        overflow: hidden;
+        
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #footerContent {
+        width: 80%;
+        height: 100%;
+
+        margin-left: 6rem;
+
+        overflow: visible;
+    }
+
+    #footerBranding h3 {
+        padding-top: 0rem;
+        padding-left: 0rem;
+        margin-right: 25vw;
+    }
+
+    #footerBranding {
+        margin: 0;
+    }
+
+    #topRowFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow-y: visible;
+
+        gap: 10vw;
+
+        margin-top: 0rem;
+        padding-top: 2rem;
+    }
+
+    #footerLogo {
+        font-size: 100pt;
+        padding-top: 0rem;
+    }
+
+    #clickableFooter {
+        padding: 0;
+    }
+
+    #footerButton {
+        position: static;
+
+        margin: 0;
+        /* padding-bottom: 6rem; */
+        padding: 0;
+        padding-top: 6rem;
+    }
+
+    #contactInfo {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+        padding: 0;
+
+    }
+
+    #footerMore {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linkTitle {
+        font-size: 14pt;
+    }
+
+    #footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 20vw;
+    }
+
+    #program {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 0rem;
+    }
+
+
+    #followInfo {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #footerIconButtons {
+        transform: scale(0.6);
+        display: flex;
+
+        margin-left: -4rem;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #established {
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    #estInfo {
+        font-size: 12pt;
+
+    }
+}
+
+/* Apple iPad (portrait): 768 x 1024 pixels */
+@media only screen and (max-width: 768px) {}
+
+
+/* EXTRA */
+@media only screen and (max-width: 700px) {
+    #topRowFooter {
+        gap: 2rem;
+        overflow: visible;
+    }
+
+    #footerLogo {
+        font-size: 60pt;
+    }
+
+    #footerButton {
+        transform: scale(0.6);
+        padding-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 635px) and (max-width: 960px) {
+    #footerButton {
+        transform: scale(1.5);
+        margin-top: 8rem;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    #footerBranding h3 {
+        margin-right: 5vw;
+    }
+}
+
+/* EXTRA */
+
+/* MOBILE DEVICES */
+/* Apple iPhone XR/11: 414 x 896 pixels */
+@media only screen and (max-width: 414px) {}
+
+@media only screen and (max-width: 465px) {
+
+    #topRowFooter {
+        gap: 20vw;
+        overflow: visible;
+    }
+
+    #footerContent {
+        width: 90%;
+        height: 100%;
+
+        margin-left: 2rem;
+    }
+
+    #footerLinks {
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    #footerLogo {
+        font-size: 60pt;
+    }
+
+    .linkTitle {
+        font-size: 12pt;
+    }
+
+    #estInfo {
+        font-size: 10pt;
+    }
+}
+
+/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
+@media only screen and (max-width: 390px) {}
+
+@media only screen and (max-width: 395px) {
+    #footerBranding h3 {
+        font-size: 5rem;
+    }
+}
+
+/* Apple iPhone SE: 375 x 667 pixels */
+@media only screen and (max-width: 375px) {}
+
+/* Samsung Galaxy S21: 360 x 800 pixels */
+@media only screen and (max-width: 360px) {}

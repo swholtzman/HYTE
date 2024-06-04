@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>HYTE Landing Page</title>
+    <title>HYTE Landing</title>
 
     <!-- FAVICON -->
     <link
@@ -212,7 +212,24 @@
       <!-- NAV PAGE BEGINS -->
       <section id="navPage">
         <!-- CONTENT OF NAV PAGE -->
-        <div id="navPageContent">
+        <div id="navPageOuterContent">
+          <div id="navPageContent">
+            <!--  -->
+            <p id="more">More About Us</p>
+            <!-- NAVIGATION HYPERLINKS -->
+            <div id="navPageLinks">
+              <a href="../WhyHYTE/whyHYTE.html" id="whyHYTE"> Why HYTE? </a>
+              <a href="../Founder/founder.html" id="meetFounder">
+                Meet the Founder
+              </a>
+              <a href="../Mentors/mentors.html" id="ourMentors">
+                Our Mentors
+              </a>
+              <a href="../Programs/programs.html" id="ourPrograms">
+                Our Programs
+              </a>
+            </div>
+          </div>
           <div id="navBGImage">
             <img
               id="navBlenderImage"
@@ -220,19 +237,6 @@
               src="../Main/images/BlenderImage.png"
               alt="Cool Blender Image!"
             />
-          </div>
-          <!--  -->
-          <p id="more">More About Us</p>
-          <!-- NAVIGATION HYPERLINKS -->
-          <div id="navPageLinks">
-            <a href="../WhyHYTE/whyHYTE.html" id="whyHYTE"> Why HYTE? </a>
-            <a href="../Founder/founder.html" id="meetFounder">
-              Meet the Founder
-            </a>
-            <a href="../Mentors/mentors.html" id="ourMentors"> Our Mentors </a>
-            <a href="../Programs/programs.html" id="ourPrograms">
-              Our Programs
-            </a>
           </div>
           <!-- BUTTON ON NAV PAGE -->
           <div id="navPageButton">
@@ -310,14 +314,6 @@
               academic goals.
             </p>
           </div>
-          <div id="programsImage">
-            <img
-              id="programsGraphic"
-              class="linesImage"
-              src="../Main/images/Lines(large).png"
-              alt="lines"
-            />
-          </div>
           <div id="programsGraphicButton">
             <div id="programsButton">
               <a class="circularButton" href="../Programs/programs.html">
@@ -372,9 +368,7 @@
                   />
                 </svg>
               </a>
-            </div>
-
-            <!-- BUTTON AND FRAME -->
+              <!-- BUTTON AND FRAME -->
             <div id="programsFrame">
               <!-- LEFT LINE-->
               <div class="left-line">
@@ -579,6 +573,8 @@
               </div>
             </div>
             <!-- BUTTON AND FRAME -->
+            </div>
+
           </div>
         </div>
       </section>
@@ -591,14 +587,6 @@
             <h3 id="phaseLogo">HYTE</h3>
             <p id="phaseTitle">Program Phases</p>
           </div>
-          <!-- <div id="phaseGraphic"> -->
-          <!-- <img
-            id="phaseGraphic"
-            class="linesImage"
-            src="../Main/images/lines(normal).png"
-            alt="lines"
-          /> -->
-          <!-- </div> -->
 
           <div id="phaseText">
             <div id="phases">
@@ -608,7 +596,7 @@
             </div>
             <div id="phaseDescriptions">
               <p id="techDescription" class="description">
-                Phase 1 of HYTE provides student with a deep and tangible
+                Phase 1 of HYTE provides students with a deep and tangible
                 understanding of what STEM & tech really means.
                 <br />
                 <br />
@@ -703,7 +691,7 @@
                 Phase 2: Entrepreneurship
               </p>
               <p class="smallerPhaseDescription" id="smallerEntreDescription">
-                Phase 2 of HYTE provides student with the tools to develop a
+                Phase 2 of HYTE provides students with the tools to develop a
                 business mindset, and learn the phases of initiating their own
                 tech venture.
                 <br />
@@ -922,7 +910,7 @@
             <div id="followInfo">
               <p id="followUs">Follow Us</p>
               <div id="footerIconButtons">
-                <a class="iconLink" href="#">
+                <a class="iconLink" target="_blank" href="https://www.instagram.com/hyte.program?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                   <button id="iconButton1">
                     <svg
                       id="icon"
@@ -939,7 +927,7 @@
                     </svg>
                   </button>
                 </a>
-                <a class="iconLink" href="#">
+                <a class="iconLink" target="_blank" href="https://www.linkedin.com/company/hyte-horizons-program/">
                   <button id="iconButton2">
                     <svg
                       id="icon"

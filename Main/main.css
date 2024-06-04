@@ -38,6 +38,7 @@ body {
 
 /* Landing Page */
 #landingContent {
+    min-height: 700px;
     grid-area: landing;
     padding-top: 10%;
     padding-left: 10%;
@@ -138,10 +139,6 @@ h1 {
         margin-top: -5rem;
     }
 
-    #registerButton {
-        padding-right: 10rem;
-        padding-top: 10rem;
-    }
 }
 
 @media (max-width: 650px) {
@@ -153,11 +150,6 @@ h1 {
     #intro-section {
         font-size: 20pt;
         width: 80vw;
-    }
-
-    #registerButton {
-        padding-right: 10rem;
-        padding-top: 12rem;
     }
 }
 
@@ -173,10 +165,17 @@ h1 {
     align-items: center;
 }
 
-#navPageContent {
-    position: relative;
+#navPageOuterContent {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 4rem;
+    
+    padding-left: 12.5%;
+    padding-top: 15%;
 
     width: 90vw;
     height: 95vh;
@@ -187,10 +186,12 @@ h1 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+}
 
-    gap: 2rem;
-    padding-left: 12.5%;
-    padding-top: 15%;
+#navPageContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
     overflow: hidden;
 }
@@ -223,6 +224,9 @@ h1 {
     display: flex;
     flex-direction: column;
 
+    width: 30vw;
+
+    font-size: 3rem;
     font-size: 31pt;
     gap: 2rem;
 }
@@ -303,17 +307,16 @@ h1 {
 
 #more {
     text-transform: uppercase;
+    margin-bottom: 1rem;
     
     color: grey;
     font-size: 12pt;
 }
 
-/* BUTTON CUSTOMS FOR NAVIGATION PAGE */
 #navPageButton {
-    position: absolute;
+    transform: scale(1.4);
 
-    margin-left: 50%;
-    margin-top: 15%;
+    margin-left: 4rem;
 }
 
 #navPageButton .buttonText {
@@ -362,20 +365,32 @@ h1 {
 /* Programs Page */
 #programsSection {
     z-index: 10;
+    min-height: 900px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     grid-area: programs;
-
     position: relative;
     height: 100vh;
+    background-image: url("../Main/images/Lines(large).png");
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #programsContent {
-    margin-top: 10%;
-    
+    /* margin-top: 10%; */
     display: flex;
     flex-direction: column;
-    align-items: left;
+
     justify-content: center;
+    gap: 2rem;
+    /* align-items: center; */
+    position: relative;
+
+
 }
 
 #programsText {
@@ -386,7 +401,7 @@ h1 {
 #programsHeader {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
 }
 
 #programsOur {
@@ -410,18 +425,6 @@ h1 {
     font-size: 26pt;
 }
 
-#programsImage {
-    z-index: -100;
-
-    position: absolute;
-    left: -20rem;
-
-    filter: saturate(80%) brightness(80%);
-    opacity: 0.8;
-
-    pointer-events: none;
-}
-
 #programsGraphic {
     pointer-events: none;
 }
@@ -434,9 +437,12 @@ h1 {
 }
 
 #programsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 20;
 
-    margin-bottom: -2rem;
     transform: scale(1.3);
     -webkit-transform: scale(1.3); /* WebKit equivalent */
 }
@@ -446,9 +452,8 @@ h1 {
 }
 
 #programsButton .circle {
-    /* z-index: 0; */
-
     opacity: 0.8;
+
     border-radius: 50%;
     fill: rgba(2, 0, 100, 0.15);
 
@@ -478,6 +483,10 @@ h1 {
 }
 
 #programsFrame {
+    margin-top: -4rem;
+
+    transform: scale(0.8);
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -498,9 +507,13 @@ h1 {
     margin-left: -10px;
 }
 
+
+
+
 /* Program Phases */
 #programPhases {
     position: relative;
+
 
     z-index: 50;
     
@@ -571,9 +584,6 @@ h1 {
     font-family: "anton", sans-serif;
     font-weight: 400;
     font-style: italic;
-    
-    transform: skewX(-15deg);
-    -webkit-transform: skewX(-15deg); /* WebKit equivalent */
 }
 
 #phaseTitle {
@@ -744,17 +754,306 @@ h1 {
 }
 
 /* Responsive Edits */
+/* DESKTOPS */
+/* 4K: 3840 x 2160 pixels */
+@media only screen and (max-width: 3840px) {}
+
+/* 2K: 2560 x 1440 pixels */
+@media only screen and (max-width: 2560px) {
+    
+}
+
+/* Full HD: 1920 x 1080 pixels */
+@media only screen and (max-width: 1920px) {
+
+}
+
+/* SMALL LAPTOPS */
+/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
+@media only screen and (max-width: 2560px) {}
+
+/* MacBook Air 13-inch: 1440 x 900 pixels */
+@media only screen and (max-width: 1440px) {}
+
+
+/* EXTRA, DO NOT DUPLICATE */
+/* PHASE TRANSITION */
+@media only screen and (min-width: 1290px) {
+    #phaseSmaller {
+        display: none !important;
+    }
+}
+
+#phaseSmaller {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 4rem;
+
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.smallerPhaseTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.smallerPhaseDescription {
+    width: 80%;
+    font-size: 16pt;
+}
+
+.smallerPhaseDivider {
+    width: 80%;
+    margin: 2rem;
+}
+
+@media only screen and (max-width: 1289px) {
+    
+
+    #phaseContent {
+        justify-content: center;
+        align-items: center;
+
+        min-height: 1500px;
+    }
+
+    #phaseText {
+        display: none;
+    }
+
+    #pageGrid {
+        width: 100vw;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 110vh auto;
+        grid-template-areas:
+            "landing"
+            "navigation"
+            "programs"
+            "phases"
+            "footer";
+    }
+}
+
+@media only screen and (max-width: 1235px) {
+    #navPageOuterContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto; 
+        overflow: visible;
+    }
+    
+    #navPageContent {
+        width: 100%;
+        
+        margin: 0;
+    }
+    
+    #navPageButton {
+        position: static;
+    
+        padding: 0;
+        margin: 0;
+        margin-bottom: 4rem;
+        padding-left: 30vw;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    #landingContent {
+        /* margin-top: 10rem; */
+        margin-bottom: 10rem;
+    }
+
+    #registerButton {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2); /* WebKit equivalent */
+    }
+}
+
+@media (max-width: 1100px) {
+    #registerButton {
+        margin-left: 10%;
+    }
+
+    #programsContent {
+        align-items: center;
+    }
+
+    #programsText {
+        margin-left: -8rem;
+    }
+}
+
+@media (max-width: 875px) {
+
+    #navPageButton {
+        margin-left: 0%;
+        top: 65%;
+        left: 0%;
+        
+    }
+}
+
+@media (max-width: 945px) {
+    /* Specific styles for screens smaller than 945px can be added here */
+}
+
+@media (max-width: 1185px) and (min-width: 801px) {
+    #programsGraphicButton {
+        margin-top: 6rem;
+    }
+}
+/* EXTRA, DO NOT DUPLICATE */
+
+
+/* Tablets */
+/* Apple iPad (landscape): 1024 x 768 pixels */
+@media only screen and (max-width: 1024px) {}
+
+
+/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
+@media only screen and (max-width: 800px) {
+    #landingContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    #title-section {
+        font-size: 80pt;
+    }
+
+    #registerButton {
+        padding: 0;
+        margin: 0;
+
+        padding-top: 4rem;
+        left: 40%;
+        
+        transform: scale(0.85);
+        -webkit-transform: scale(0.85);
+    }
+
+    #intro-section {
+        width: 60vw;
+        font-size: 18pt;
+    }
+
+    #navPageButton {
+        transform: scale(1);  
+    } 
+
+    #programsSection {
+        /* height: 110vh; */
+        background-size: 200%;
+    }
+
+
+    #programsOur {
+        font-size: 45pt;
+    }
+
+    #programsPrograms {
+        font-size: 50pt;
+    }
+
+    #programsDescription {
+        font-size: 20pt;
+        width: 50vw;
+
+        margin-bottom: 4rem;
+    }
+}
+
+/* Apple iPad (portrait): 768 x 1024 pixels */
+@media only screen and (max-width: 768px) {
+
+}
+
+
+
+/* EXTRA, DO NOT DUPLICATE */
+/* @media only screen and (min-width: px) and (max-width: 800px) {} */
+
+@media (max-width: 600px) {
+    #registerButton {
+        padding-top: 6rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #title-section {
+        right: 0;
+        top: 5%;
+    }
+
+    #intro-section {
+        width: 70vw;
+        top: 5%;
+        font-size: 16pt;
+    }
+
+    #programsText {
+        margin-left: -8rem;
+    }
+
+    #programsOur {
+        padding-top: 5rem;
+        font-size: 35pt;
+    }
+
+    #programsPrograms {
+        font-size: 40pt;
+    }
+
+    #programsDescription {
+        font-size: 16pt;
+        width: 60vw;
+    }
+
+
+}
+
+@media (max-width: 515px) {
+    #navPageLinks {
+        font-size: 24pt; 
+    }
+
+    #programsSection {
+        background-size: 300%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    #title-section {
+        font-size: 70pt;
+        margin-left: 0;
+    }
+
+    #intro-section {
+        width: 80%;
+        margin: 0;
+        padding-left: 10px;
+    }
+}
+
+/* EXTRA, DO NOT DUPLICATE */
+
 
 /* MOBILE DEVICES */
-/* Samsung Galaxy S21: 360 x 800 pixels */
-@media only screen and (max-width: 360px) {}
-
-/* Apple iPhone SE: 375 x 667 pixels */
-@media only screen and (max-width: 375px) {}
-
-/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
-@media only screen and (max-width: 390px) {}
-
 /* Apple iPhone XR/11: 414 x 896 pixels */
 @media only screen and (max-width: 414px) {
     #landingContent {
@@ -770,26 +1069,13 @@ h1 {
     #intro-text {
         width: 80vw;
     }
-    
-    #registerButton {
-        padding: 0;
-        left: 25%;
-        padding-top: 30vh;
-        margin-bottom: -4rem;
-
-        transform: scale(0.8);
-        -webkit-transform: scale(0.8); /* WebKit equivalent */
-    }
 
     #navPageLinks {
         font-size: 20pt;
     }
 
-    /* #navPage */
-
     #programsContent {
         height: 100%;
-        margin-left: -20vw;
     }
 
     #programsOur {
@@ -806,20 +1092,14 @@ h1 {
         width: 80vw;
     }
 
-    #programsImage {
-        transform: scale(0.5);
-        -webkit-transform: scale(0.5); /* WebKit equivalent */
-        
-        right: 40rem;
-        bottom: -27rem;
+    #programsContent::before {
+        left: 10%;
     }
 
     #programsGraphicButton {
         transform: scale(0.7);
         -webkit-transform: scale(0.7); /* WebKit equivalent */
-        
-        margin-top: 5vh;
-        margin-left: 20vw;
+
     }
 
     #programPhases {
@@ -857,232 +1137,27 @@ h1 {
         font-size: 24pt;
     }
 
-    #phaseGraphic {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-
-        bottom: 12rem;
-        left: 4rem;
-        margin-bottom: -15rem;
-    }
 }
 
+/* Apple iPhone 12/13 Pro: 390 x 844 pixels */
+@media only screen and (max-width: 390px) {}
 
-/* EXTRA, DO NOT DUPLICATE */
-@media (max-width: 400px) {
-    #title-section {
-        font-size: 70pt;
-        margin-left: 0;
-    }
+/* Apple iPhone SE: 375 x 667 pixels */
+@media only screen and (max-width: 375px) {}
 
-    #intro-section {
-        width: 80%;
-        margin: 0;
-        padding-left: 10px;
-    }
-
-    #registerButton {
-        top: 10%;
-        right: 30vw;
-        transform: scale(0.8);
-        -webkit-transform: scale(0.8); /* WebKit equivalent */
-    }
-}
-
-@media (max-width: 420px) {
-    #whiteContent {
-        padding-top: 30%;
-    }
-}
-
-@media (max-width: 550px) {
-    #title-section {
-        right: 0;
-        top: 5%;
-    }
-
-    #intro-section {
-        width: 70vw;
-        top: 5%;
-        font-size: 16pt;
-    }
-
-    #registerButton {
-        top: 20%;
-        right: 30%;
-        transform: scale(1.0);
-        -webkit-transform: scale(1.0); /* WebKit equivalent */
-    }
-}
-
-@media (max-width: 700px) {
-    #navPageContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto; 
-        overflow: visible;
-
-        padding: 4rem;
-    }
-
-    #navPageButton {
-        position: static;
-
-        left: 0;
-        padding: 0;
-        margin: 0;
-        padding-top: 4rem;
-    }
-
-}
-
-@media (max-width: 775px) {
-    #title-section {
-        font-size: 80pt;
-    }
-
-    #intro-section {
-        font-size: 18pt;
-    }
-
-    #registerButton {
-        margin-left: -10;
-        margin-top: -50%;
-    }
-}
-/* EXTRA, DO NOT DUPLICATE */
-
-
-/* Tablets */
-/* Apple iPad (portrait): 768 x 1024 pixels */
-@media only screen and (max-width: 768px) {
-
-}
-
-/* Samsung Galaxy Tab S7: 800 x 1280 pixels */
-@media only screen and (max-width: 800px) {
-    #registerButton {
-        
-    }
-
-    #navPageButton {
-        margin-left: 30rem;
-        margin-top: 0rem;
-    }
-}
-
-/* Apple iPad (landscape): 1024 x 768 pixels */
-@media only screen and (max-width: 1024px) {}
+/* Samsung Galaxy S21: 360 x 800 pixels */
+@media only screen and (max-width: 360px) {}
 
 
 
-/* EXTRA, DO NOT DUPLICATE */
-@media (max-width: 875px) {
 
-    #navPageButton {
-        margin-left: 0%;
-        top: 65%;
-        left: 0%;
-        
-    }
-}
 
-@media (max-width: 945px) {
-    /* Specific styles for screens smaller than 945px can be added here */
-}
 
-@media (min-width: 1100px) {
-    #landingContent {
-        padding-top: 10rem;
-    }
 
-    #registerButton {
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2); /* WebKit equivalent */
-    }
-}
 
-@media (max-width: 1100px) {
-    #registerButton {
-        margin-left: 10%;
-    }
-}
 
-/* PHASE TRANSITION */
-@media only screen and (max-width: 1289px) {
-    #phaseContent {
-        justify-content: center;
-        align-items: center;
-    }
 
-    #phaseText {
-        display: none;
-    }
 
-    #pageGrid {
-        width: 100vw;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 110vh 100vh 105vh auto auto;
-        grid-template-areas:
-            "landing"
-            "navigation"
-            "programs"
-            "phases"
-            "footer";
-    }
-}
 
-@media only screen and (min-width: 1290px) {
-    #phaseSmaller {
-        display: none !important;
-    }
-}
 
-#phaseSmaller {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 4rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.smallerPhaseTitle {
-    font-size: 24pt;
-    margin-bottom: 1rem;
-}
-
-.smallerPhaseDescription {
-    width: 80%;
-    font-size: 16pt;
-}
-
-.smallerPhaseDivider {
-    width: 80%;
-    margin: 2rem;
-}
-/* EXTRA, DO NOT DUPLICATE */
-
-/* SMALL LAPTOPS */
-/* MacBook Air 13-inch: 1440 x 900 pixels */
-@media only screen and (max-width: 1440px) {}
-
-/* MacBook Pro 13-inch: 2560 x 1600 pixels (scaled resolution) */
-@media only screen and (max-width: 2560px) {}
-
-/* DESKTOPS */
-/* Full HD: 1920 x 1080 pixels */
-@media only screen and (max-width: 1920) {}
-
-/* 2K: 2560 x 1440 pixels */
-@media only screen and (max-width: 2560px) {}
-
-/* 4K: 3840 x 2160 pixels */
-@media only screen and (max-width: 3840px) {}

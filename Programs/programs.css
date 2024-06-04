@@ -14,10 +14,10 @@ body {
 
 #programsGrid {
     width: 100vw;
-    overflow: hidden;
+
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto 100vh;
+    grid-template-rows: 100vh auto auto;
     grid-template-areas:
         "landing"
         "programs"
@@ -85,6 +85,7 @@ body {
 /* PROGRAMS SECTION STARTS */
 #programsSection {
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -98,6 +99,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 #mainCourse {
@@ -598,8 +600,128 @@ body {
 #footerPage {
     grid-area: footer;
     z-index: 10;
+
+    height: auto;
     background: url("../Programs/images/LowFoldBlender(Figma).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+
+    #footerPage {
+        overflow: hidden;
+        
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #footerContent {
+        width: 80%;
+        height: 100%;
+    }
+
+    #footerBranding h3 {
+        padding-top: 0rem;
+        padding-left: 0rem;
+    }
+
+    #footerBranding {
+        margin: 0;
+    }
+
+    #topRowFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        gap: 2rem;
+
+        margin-top: 0rem;
+    }
+
+    #footerLogo {
+        font-size: 100pt;
+        padding-top: 0rem;
+    }
+
+    #clickableFooter {
+        padding: 0;
+    }
+
+    #footerButton {
+        margin: 0;
+        /* padding-bottom: 6rem; */
+        padding: 0;
+        padding-top: 6rem;
+    }
+
+    #contactInfo {
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+        padding: 0;
+
+    }
+
+    #footerMore {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .linkTitle {
+        font-size: 14pt;
+    }
+
+    #footerLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 20vw;
+    }
+
+    #program {
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 0rem;
+    }
+
+
+    #followInfo {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #footerIconButtons {
+        transform: scale(0.6);
+        display: flex;
+
+        margin-left: -4rem;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #established {
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    #estInfo {
+        font-size: 12pt;
+
+    }
 }
