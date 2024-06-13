@@ -125,16 +125,16 @@ _______________________________________
     Notes:
     - founder.css   
         - need cards to display like in figma when width is reduced
-
     -----------------------------------
 
     -----------------------------------
-    Saturday June 8th
+    Wednesday June 12th
     -----------------------------------
+    - In Progress:
+        - Creation of cursor follower
 
-    
-
-
+    - Sticking Points:
+        - Cursor followed until morion stops, where "blob" returns to top left of screen (bug)
     -----------------------------------
 
     -----------------------------------
