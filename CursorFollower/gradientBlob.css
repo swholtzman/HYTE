@@ -1,0 +1,39 @@
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000211;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#blob {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    height: 300px;
+    aspect-ratio: 1;
+
+    background: linear-gradient(to right, #00ffff, #ff00ff);
+    border-radius: 50%;
+    pointer-events: none;
+
+    animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+

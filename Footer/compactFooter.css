@@ -107,8 +107,8 @@ body {
     gap: 10rem;
 }
 
-#linkHeader {
-    padding-bottom: 0.75rem;
+.linkTitle {
+    padding-bottom: 1rem;
 
     font-size: 14pt;
     text-transform: uppercase;
@@ -329,10 +329,14 @@ body {
 
 /* Tablets */
 /* Apple iPad (landscape): 1024 x 768 pixels */
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+    .linkTitle {
+        font-size: 14pt;
+    }
+}
 
 /* Samsung Galaxy Tab S7: 800 x 1280 pixels */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 985px) {
 
 
     #footerPage {
@@ -408,10 +412,6 @@ body {
         padding: 0;
     }
 
-    .linkTitle {
-        font-size: 14pt;
-    }
-
     #footerLinks {
         display: flex;
         flex-direction: row;
@@ -460,7 +460,9 @@ body {
 }
 
 /* Apple iPad (portrait): 768 x 1024 pixels */
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+
+}
 
 
 /* EXTRA */
@@ -528,6 +530,18 @@ body {
 
     #estInfo {
         font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    #footerLinks {
+        font-size: 10pt;
+    }
+
+    .linkTitle {
+        font-size: 11pt;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
     }
 }
 

@@ -24,9 +24,9 @@ _______________________________________
             - Container width
             - Landing page?
         - Programs 
-    - Tablet (415 - )
+    - Tablet (415 - 800 x 965-1280)
         - Programs
-        - 
+        - Main
     - Laptop
         - Programs
     - Desktop:
@@ -47,6 +47,9 @@ _______________________________________
         - graphic button with frame could be rebuikt to be similar to the dividers from why hyte
     - Add loading animation
     - Add cursor follower (Hyperplexed on YouTube) 
+    - Change BG Image for main.html navPage
+    - Re-work card layout as part of responsivity
+        - 2 1 2
 _______________________________________
 _______________________________________
 
@@ -106,6 +109,34 @@ _______________________________________
     -----------------------------------
 
     -----------------------------------
-    __ June ___
+    Wednesday June 5th
     -----------------------------------
+    Discovered:
+    - main.css 
+        - landing page ratios look bad at 800 x 965+
+        - need to change photo for nav page, ASAP.
+    - whyHYTE:
+        - Dividers lines images cropped across top and bottom, 
+            - fix cropping (::before ??)
+    Completed:
+    - founders.css 
+        - made landing page responsive (laptop--)
+        -scaled down card sizes at 440px
+    Notes:
+    - founder.css   
+        - need cards to display like in figma when width is reduced
+
+    -----------------------------------
+
+    -----------------------------------
+    Saturday June 8th
+    -----------------------------------
+
     
+
+
+    -----------------------------------
+
+    -----------------------------------
+    ___ June ___th
+    -----------------------------------

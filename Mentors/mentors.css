@@ -16,7 +16,7 @@ body {
     width: 100vw;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     grid-template-rows: 100vh auto;
     grid-template-areas:
         "landing"
@@ -27,7 +27,20 @@ body {
 /* LANDING SECTION STARTS */
 #landingSection {
     grid-area: landing;
+    overflow: visible;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
 }
+
+#landingBG {
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    background-image: url('../Main/images/lines(BG).png');
+    background-size: cover;
+    background-position: center;
+}
+
 
 #landingContent {
     position: relative;
@@ -55,13 +68,13 @@ body {
 
 #our {
     margin-bottom: -1rem;
-    color: #CDCDCD;
+    color: #D9D9D9;
     text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
     font-size: 60pt;
 }
 
 #mentors {
-    color: #D9D9D9;
+    color: #FFF;
     text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
     font-size: 65pt;
 }
@@ -77,35 +90,24 @@ body {
     /* Add styles if needed */
 }
 
-#landingImage {
-    z-index: -100;
-    position: absolute;
-
-    left: 5%;
-    bottom: -70%;
-
-    filter: saturate(80%) brightness(60%);
-    opacity: 0.8;
-}
-
-#landingGraphic {
-    /* Add styles if needed */
-}
 
 /* LANDING SECTION ENDS */
 
 /* MENTORS MAIN SECTION STARTS */
 #mentorsMain {
-    margin-top: 15vh;
+   
     grid-area: mentors;
 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0));
+
 }
 
 #mentorsContent {
+    margin-top: 15vh;
     width: 85%;
     height: auto; 
 }
@@ -225,6 +227,12 @@ body {
     
 }
 
+@media only screen and (max-width: 1100px) {
+    #landingParagraph {
+        width: 55vw;
+    }
+}
+
 @media only screen and (max-width: 960px) {
 
 
@@ -342,9 +350,124 @@ body {
     }
 }
 
+@media only screen and (max-width: 660px) {
+    #landingContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 10rem;
+    }
+
+    #landingText {
+        margin: 0;
+        padding: 0;
+        margin-left: 6rem;
+    }
+
+    #our {
+        font-size: 55pt;
+    }
+
+    #mentors {
+        font-size: 60pt;
+    }
+
+    #landingParagraph {
+
+        width: 60vw;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #landingText {
+        margin: 0;
+        padding: 0;
+        margin-left: 6rem;
+    }
+
+    #landingHeader {
+        gap: 1rem;
+    }
+
+    #our {
+        font-size: 40pt;
+    }
+
+    #mentors {
+        font-size: 45pt;
+    }
+
+    #landingParagraph {
+        font-size: 24pt;
+    }
+
+}
+
 @media only screen and (max-width: 480px) {
     #estInfo {
         font-size: 10pt;
 
     }
+}
+
+@media only screen and (max-width: 460px) {
+
+    #landingText {
+        padding-top: 10vh;
+        margin-left: 4rem;
+    }
+
+    #our {
+        font-size: 35pt;
+    }
+
+    #mentors {
+        font-size: 40pt;
+    }
+
+    #landingParagraph {
+        font-size: 18pt;
+    }
+
+}
+
+@media only screen and (max-width: 445px) {
+    #footerLinks {
+        font-size: 10pt;
+    }
+
+    .linkTitle {
+        font-size: 11pt;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .mentorCard {
+        transform: scale(0.9);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    #landingText {
+        margin-left: 2rem;
+    }
+
+    #our {
+        font-size: 35pt;
+    }
+
+    #mentors {
+        font-size: 40pt;
+    }
+
+    #landingParagraph {
+        font-size: 18pt;
+    }
+
 }

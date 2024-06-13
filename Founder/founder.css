@@ -455,12 +455,23 @@ body {}
 }
 
 @media only screen and (max-width: 760px) {
+    #footerButton {
+        transform: scale(1);
+        padding-top: 2rem;
+    }
+
     #page2Glass {
         width: 100vw;
     }
     
     #founderAboutMe {
         width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #footerBranding h3 {
+        margin-right: 5vw;
     }
 }
 
@@ -485,6 +496,25 @@ body {}
     
     .founderLandingImage {
         width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #footerButton {
+        transform: scale(0.8);
+        padding-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    #footerLinks {
+        font-size: 10pt;
+    }
+
+    .linkTitle {
+        font-size: 11pt;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
     }
 }
 

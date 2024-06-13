@@ -505,3 +505,15 @@ body {
 
     }
 }
+
+@media only screen and (max-width: 445px) {
+    #footerLinks {
+        font-size: 10pt;
+    }
+
+    .linkTitle {
+        font-size: 11pt;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0rem;
+    }
+}
