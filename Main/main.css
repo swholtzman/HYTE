@@ -27,7 +27,7 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh 100vh auto 150vh auto;
+    grid-template-rows: 100vh 100vh auto auto auto;
     grid-template-areas:
         "landing"
         "navigation"
@@ -514,6 +514,7 @@ h1 {
 #programPhases {
     position: relative;
 
+    min-height: 1100px;
 
     z-index: 50;
     
