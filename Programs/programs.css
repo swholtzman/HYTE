@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto auto;
+    grid-template-rows: auto;
     grid-template-areas:
         "landing"
         "programs"
@@ -154,12 +154,13 @@ body {
 #programsFrame {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
 }
 
 .left-line {
-    margin-bottom: -2.2rem;
+    margin-bottom: -2.85rem;
+    margin-right: -0.25rem;
 }
 
 .arc {
@@ -167,9 +168,9 @@ body {
 }
 
 .right-line {
-    margin-top: -2.2rem;
+    margin-top: -2.725rem;
+    margin-right: -0.25rem;
 }
-
 /* LANDING SECTION ENDS */
 
 

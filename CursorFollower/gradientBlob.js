@@ -1,16 +1,15 @@
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const blob = document.getElementById("blob");
+const blob = document.getElementById("blob");
+document.body.onpointermove = e => {
+const { clientX, clientY } = e;
 
-  document.body.onpointermove = event => {
-      const { clientX, clientY } = event;
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, {
+    duration: 3000,
+    fill: "forwards"
+  })
 
-      // Use requestAnimationFrame for smooth animation
-      requestAnimationFrame(() => {
-          blob.style.left = `${clientX}px`;
-          blob.style.top = `${clientY}px`;
-      });
-  };
-});
-
+}
