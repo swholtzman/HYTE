@@ -1,20 +1,26 @@
 :root {}
 
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background-color: #000211;
     height: 100vh;
     overflow: hidden;
-}
+} */ 
+
+
+
 
 #blob {
-    position: absolute;
-    transform: translate(-50%, -50%);
+    z-index: -102;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
 
     height: 300px;
     aspect-ratio: 1;
@@ -23,17 +29,37 @@ body {
     border-radius: 50%;
     pointer-events: none;
 
-    animation: rotate 20s infinite;
+    animation: rotate 15s infinite;
 }
 
 @keyframes rotate {
     from {
-        transform: translate(-50%, -50%) rotate(0deg);
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.5;
     }
 
     to {
-        transform: translate(-50%, -50%) rotate(360deg);
+        rotate: 360deg;
     }
 }
 
+#blobContainer {
+    z-index: -100;
 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#blur {
+    z-index: -100;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(200px) ;
+    -webkit-backdrop-filter: blur(200px) ;
+}

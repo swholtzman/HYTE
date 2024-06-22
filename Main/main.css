@@ -217,7 +217,7 @@ h1 {
     object-fit: cover;
     border-radius: 1rem;
 
-    filter: saturate(90%) contrast(110%) blur(10px) brightness(60%);
+    filter: saturate(90%) contrast(140%) blur(10px) brightness(80%);
 }
 
 #navPageLinks {
@@ -678,7 +678,7 @@ h1 {
 }
 
 #phaseDescriptions {
-    font-size: 16pt;
+    font-size: 18pt;
     margin-left: 5rem;
 }
 
