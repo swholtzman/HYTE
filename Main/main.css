@@ -541,7 +541,7 @@ h1 {
     height: 100%;
     background-image: url("../Main/images/lines(normal).png");
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
     filter: blur(8px); /* Blur the background image */
     z-index: -1; /* Ensure it is behind the content */
