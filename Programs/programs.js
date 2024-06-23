@@ -1,34 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Elements for mainCourse
-    const mainCourse = document.getElementById('mainCourse');
-    const circlesMain = mainCourse.querySelector('.circles');
-    const expansionButtonMain = mainCourse.querySelector('.expansionButton');
+    function setupCourse(courseId) {
+        const course = document.getElementById(courseId);
+        if (!course) return; // Exit if course element is not found
 
-    // Elements for sustainabilityCourse
-    const sustainabilityCourse = document.getElementById('sustainabilityCourse');
-    const circlesSustainability = sustainabilityCourse.querySelector('.circles');
-    const expansionButtonSustainability = sustainabilityCourse.querySelector('.expansionButton');
+        const expansionButton = course.querySelector('.expansionButton');
 
-    // Add active class to start as active
-    mainCourse.classList.add('active');
-    circlesMain.classList.add('active');
-    expansionButtonMain.classList.add('active');
+        // Initially set everything to active
+        course.classList.add('active');
+        const elementsToActivate = course.querySelectorAll('.circles, .innerContent, .expansionButton');
+        elementsToActivate.forEach(element => {
+            element.classList.add('active');
+        });
 
-    sustainabilityCourse.classList.add('active');
-    circlesSustainability.classList.add('active');
-    expansionButtonSustainability.classList.add('active');
+        // Toggle on click
+        expansionButton.addEventListener('click', function() {
+            course.classList.toggle('active');
+            elementsToActivate.forEach(element => {
+                element.classList.toggle('active');
+            });
+        });
+    }
 
-    // Event listeners for mainCourse
-    expansionButtonMain.addEventListener('click', function() {
-        mainCourse.classList.toggle('active');
-        circlesMain.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
-    // Event listeners for sustainabilityCourse
-    expansionButtonSustainability.addEventListener('click', function() {
-        sustainabilityCourse.classList.toggle('active');
-        circlesSustainability.classList.toggle('active');
-        this.classList.toggle('active');
-    });
+    // Setup courses
+    setupCourse('mainCourse');
+    setupCourse('sustainabilityCourse');
 });

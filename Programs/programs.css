@@ -8,8 +8,7 @@
     box-sizing: border-box;
 }
 
-body {
-}
+body {}
 
 #programsGrid {
     width: 100vw;
@@ -22,12 +21,15 @@ body {
         "programs"
         "footer";
 
-        overflow: hidden;
+    overflow: hidden;
+
+    transition: 0.4 ease-in-out;
 }
 
 /* LANDING SECTION STARTS */
 #landingSection {
     grid-area: landing;
+
 }
 
 #landingBG {
@@ -44,8 +46,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: center;
     height: auto;
 }
 
@@ -81,39 +83,26 @@ body {
     font-size: 26pt;
 }
 
-#landingImage {
-    z-index: -100;
-    position: absolute;
-    left: 5%;
-    bottom: -70%;
-    filter: saturate(80%) brightness(60%);
-    opacity: 0.8;
-}
-
 #programsGraphicButton {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-left: 20vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.clickableButton {
-    /* display: none; */
-    position: absolute;
-    bottom: 41.25%;
-    left: 50%;
 }
 
 #programsButton {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 20;
+}
 
-    transform: scale(1.3);
-    -webkit-transform: scale(1.3); /* WebKit equivalent */
+.clickableButton {
+    margin-right: -10rem;
+
 }
 
 #programsButton .arrow path {
@@ -127,16 +116,18 @@ body {
     fill: rgba(2, 0, 100, 0.15);
 
     box-shadow: none;
-    backdrop-filter: blur(2px) saturate(1.25) contrast(3);
-    -webkit-backdrop-filter: blur(2px) saturate(1.25) contrast(3);
+    backdrop-filter: blur(2px) saturate(1.25) contrast(1.5);
+    -webkit-backdrop-filter: blur(2px) saturate(1.25) contrast(1.75);
 
     transition: 300ms ease-out;
-    -webkit-transition: 300ms ease-out; /* WebKit equivalent */
+    -webkit-transition: 300ms ease-out;
+    /* WebKit equivalent */
 }
 
 #programsButton .circularButton:hover .circle {
     transform: scale(1.4);
-    -webkit-transform: scale(1.4); /* WebKit equivalent */
+    -webkit-transform: scale(1.4);
+    /* WebKit equivalent */
 
     background: none;
     fill: rgba(2, 0, 100, 0.15);
@@ -145,64 +136,93 @@ body {
     -webkit-backdrop-filter: blur(3px) saturate(1.5) contrast(4);
 
     box-shadow: 10px 10px 20px 5px #070113, -10px -10px 20px 5px #3b1ca2a2;
-    -webkit-box-shadow: 10px 10px 20px 5px #070113, -10px -10px 20px 5px #3b1ca2a2; /* WebKit equivalent */
+    -webkit-box-shadow: 10px 10px 20px 5px #070113, -10px -10px 20px 5px #3b1ca2a2;
+    /* WebKit equivalent */
 
     transition: 500ms ease-out;
-    -webkit-transition: 500ms ease-out; /* WebKit equivalent */
+    -webkit-transition: 500ms ease-out;
+    /* WebKit equivalent */
 }
 
 #programsFrame {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    transform: scale(0.85);
 }
 
-.left-line {
-    margin-bottom: -2.85rem;
-    margin-right: -0.25rem;
-}
-
-.arc {
-    /* margin: -2rem; */
-}
-
-.right-line {
-    margin-top: -2.725rem;
-    margin-right: -0.25rem;
-}
 /* LANDING SECTION ENDS */
 
 
 /* PROGRAMS SECTION STARTS */
 #programsSection {
+    grid-area: programs;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+    width: 100vw;
+    overflow: hidden;
 
-    margin-bottom: 10rem;
+    transition: 0.4s ease-in-out;
 }
 
 #programsContent {
-    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+    
+    transition: 0.4s ease-in-out;
+}
+
+.courseBG {
+    width: 85vw;
+    height: auto;
+    transition: 0.4s ease-in-out;
+    background: rgba(0, 0, 16, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+
+    /* background-color: yellow; */
+
+    border-radius: 15px;
 
 }
 
-#mainCourse {
-    width: 80vw;
+.courseContent {
     height: auto;
+    transition: 0.4s ease-in-out;
 
-    background: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    /* background-color: navy; */
+}
 
-    border-radius: 8px;
+.innerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s ease-in-out;
+    /* background-color: orange; */
+}
+
+
+/* MAIN COURSE */
+
+#mainCourse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 85vw;
+    margin-top: 4rem;
+    transition: 0.4s ease-in-out;
 }
 
 .upperBorder {
@@ -210,17 +230,26 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 12rem;
-    width: 80vw;
+    width: 85vw;
     height: 2rem;
+
+    transition: 0.6s ease-in-out;
 }
 
 .insideBorders {
+    height: auto;
+    width: 85vw;
+    /* overflow: hidden; */
+
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 1;
+
+    padding-left: 2rem;
+    padding-right: 2rem;
     transition: 0.4s ease-in-out;
 }
 
@@ -229,47 +258,61 @@ body {
     transition: 0.4s ease-in-out;
 
     text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.85);
+
+    transition: 0.6s ease-in-out;
 }
 
 .topLine {
+    margin-top: -100px;
     width: 100%;
-    top: 4rem;
-    padding-right: 7rem;
-    /* display: flex;
-    flex-direction: row; */
+
+    height: 445px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    transition: 0.4s ease-in-out;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        "logo circles button";
+    ;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+    transition: 0.6s ease-in-out;
 }
 
 #mainCourseTitle {
+    grid-area: logo;
     border: 0;
     margin: 0;
 
-    width: 15vw;
+    width: 20vw;
     height: 10vh;
     margin-left: 3rem;
     margin-right: -3rem;
+    margin-top: -150px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+
+    transition: 0.6s ease-in-out;
 }
 
 #mainLogo {
     z-index: 10;
     font-style: italic;
     font-size: 50pt;
+    transition: 0.6s ease-in-out;
 }
 
 #mainName {
     font-size: 16pt;
     color: #FFF;
     z-index: 10;
+    transition: 0.6s ease-in-out;
 }
 
 #mainCourseLines {
@@ -280,16 +323,25 @@ body {
 }
 
 .circles {
-    margin: -2rem;
-    margin-top: -14rem;
-    transform: scale(60%);
-    transition: 0.4s ease-in-out;
+    justify-self: center;
+    align-self: center;
+    grid-area: circles;
+    scale: 70%;
+    
+    transition: 0.6s ease-in-out;
 }
 
 .registerButton {
+    grid-area: button;
 
     z-index: 20;
-    transform: scale(1.1);
+    transform: scale(1.3);
+    justify-self: center;
+    width: 15vw;
+
+    margin-left: 3rem;
+    margin-top: -150px;
+    transition: 0.6s ease-in-out;
 
 }
 
@@ -332,83 +384,54 @@ body {
 .courseDescription {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 2rem;
+
     opacity: 1;
     transition: 0.8s ease-in-out;
-    transition-delay: 0.5s;
+    
 }
 
-#mainCourseDescription {
-    margin-top: -10rem;
+#mainCourseDescription {}
+
+#theMainCourse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s ease-in-out;
+
 }
 
 .descriptionTitle {
-    font-size: 18pt;
+    font-size: 32pt;
+    margin: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    transition: 0.6s ease-in-out;
+}
+
+#theMainTitle {
+    
 }
 
 .descriptionText {
-    font-size: 16pt;
-    width: 40%;
+    font-size: 18pt;
 }
 
-.boxUnderline {
-    width: 80%;
-    opacity: 1;
-    transition: 0.8s ease-in-out;
-}
+#theMainText {}
 
-#leftBoxUnderline {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: -2rem;
-}
-
-#mentorshipText {
-    width: 45%;
-}
-
-.boxBrace {
-    position: absolute;
-    top: 25%;
-    left: 71%;
-    transform: scale(0.75);
+.buttonAndConnector {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    transition: 0.8s ease-in-out;
-    transition-delay: 0.1s;
-}
+    margin-top: -3rem;
 
-.boxBraceContents {
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 3rem;
-    margin-top: -25rem;
-    opacity: 1;
-    transition: 0.8s ease-in-out;
-}
-
-#realProjectsTitle {
-    font-size: 24pt;
-    opacity: 1;
-    transition: 0.8s ease-in-out;
-}
-
-#rightBoxUnderline {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-    margin-left: 2rem;
-    transform: rotateY(180deg);
-    opacity: 1;
-    transition: 0.8s ease-in-out;
-}
-
-#realProjectsText {
-    font-size: 18pt;
-    width: 70%;
-    opacity: 1;
-    transition: 0.8s ease-in-out;
+    transition: 0.6s ease-in-out;
+    transition-delay: 200ms;
 }
 
 .connector {
@@ -422,30 +445,26 @@ body {
 }
 
 .expansionButton {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    margin-top: -4.55rem;
 
     border-radius: 50%;
 
-    backdrop-filter: blur(8px) saturate(1.2);
-    -webkit-backdrop-filter: blur(8px) saturate(1.2);
+    backdrop-filter: blur(22px) saturate(1.2);
+    -webkit-backdrop-filter: blur(22px) saturate(1.2);
 
     transform: scale(1) rotate(0deg);
     transition: 0.8s ease-in-out;
+
+    /* background-color: rgba(0, 0, 0, 0.50); */
 }
 
+#mainCourseExpansion {}
+
 .bars {
-    position: absolute;
-    top: 80%;
-    left: 5%;
-    transform: rotate(90deg);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     opacity: 1;
     transition: 0.5s ease-in-out;
-    transition-delay: 0.5s;
 }
 
 .lowerBorder {
@@ -454,69 +473,85 @@ body {
     align-items: center;
     margin-top: 2rem;
     gap: 12rem;
-    width: 80vw;
+    width: 85vw;
     height: 2rem;
+    transition: 0.8s ease-in-out;
+    /* margin-bottom: -0.5rem */
+}
+
+
+#mainCourse.active .insideBorders>div:not(.topLine):not(.buttonAndConnector),
+#mainCourse.active .courseDescription,
+#mainCourse.active #mainCourseLines {
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: 0.6s ease-in-out;
+    
+}
+
+
+#mainCourse.active,
+#mainCourse.active .insideBorders,
+#mainCourse.active .courseBG{
+    height: auto;
+    transition: 0.6s ease-in-out;
+    
+}
+
+#mainCourse.active .innerContent {
+
+    height: 0;
+    /* opacity: 0; */
     transition: 0.8s ease-in-out;
 }
 
-#mainCourse.active .insideBorders>div:not(.topLine):not(.expansionButton):not(.connector),
-#mainCourse.active .courseDescription,
-#mainCourse.active .boxBrace,
-#mainCourse.active #mainCourseLine {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.6s ease-in-out;
+
+#sustainabilityCourse.active .innerContent {
+
+    height: 0;
+    /* opacity: 0; */
+    transition: 0.8s ease-in-out;
 }
 
 #mainCourse.active .bars {
     opacity: 0;
-    visibility: hidden;
-    transition: 0.1s ease-in-out;
-}
-
-.expansionButton {
-    cursor: pointer;
-}
-
-#mainCourse.active {
-    height: auto;
-    transition: 0.6s ease-in-out;
+    transition: 0.8s ease-in-out;
 }
 
 #mainCourse.active .topLine {
-    margin-top: -1rem;
+    margin-top: -8.125rem;
     transition: 0.6s ease-in-out;
 }
 
 #mainCourse.active #mainCourseLines {
-    transform: scale(0.3);
     filter: brightness(0.5);
     transition: 0.6s ease-in-out;
 }
 
+#mainCourse.active .buttonAndConnector {
+    margin-top: -10rem;
+    transition: 0.6s ease-in-out;
+    transition-delay: 200ms;
+}
+
 #mainCourse.active .expansionButton {
-    margin-top: -4.5rem;
-    transform: scale(0.9) rotate(45deg);
+    transform: scale(0.9) rotate(135deg);
     transition: 0.8s ease-in-out;
     transition-delay: 0.1s;
-
 }
 
 #mainCourse.active .connector {
-    transform: scale(0.8);
-    margin-top: -14.5rem;
     transition: 0.6s ease-in-out;
 }
 
 #mainCourse.active .lowerBorder {
-    margin-top: -11rem;
     transition: 0.6s ease-in-out;
 }
 
-.circles.active {
-    transform: scale(0.45);
+#mainCourse.active .circles {
+    margin-top: -6rem;
+    transform: scale(0.7);
     transition: 0.6s ease-in-out;
-    margin-top: -17rem;
 }
 
 
@@ -524,24 +559,16 @@ body {
 /* SUSTAINABILITY COURSE */
 #sustainabilityCourse {
     margin-top: 20%;
-
-    width: 80vw;
-    height: auto;
-
-    background: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    border-radius: 8px;
 }
 
 #sustainabilityCourseTitle {
+    grid-area: logo;
+    justify-self: center;
     font-size: 25pt;
-    margin-left: 4rem;
-    margin-right: -4rem;
+    margin-top: -210px;
+    margin-left: 2rem;
 
     text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.75);
-
 }
 
 #sustainability {
@@ -562,41 +589,34 @@ body {
 }
 
 #sustainabilityCourseDescription {
-    width: 125%;
-    margin-top: 10%;
-    margin-left: 40%;
+    opacity: 1;
+    transition: 0.6s ease-in-out;
+
 }
 
-#sustainabilityDefinitionTitle {
-    margin-top: -30rem;
-    font-size: 24pt;
-}
+#sustainabilityDefinitionTitle {}
 
-#sustainabilityDefinition {
-    width: 90%;
-}
+#sustainabilityDefinition {}
 
 #sustainabilityBars {
-    margin-top: -30rem;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotate(90deg);
+    transition: 0.4s ease-in-out;
 }
 
-#sustainabilityConnector {
-    margin-top: -20rem;
-}  
+#sustainabilityConnector {}
 
-#sustainabilityCourseExpansion {
-    margin-top: 0rem;
-    transform: scale(0.9);
-}
+#sustainabilityCourseExpansion {}
 
 #sustainabilityQuoteSection {
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    transition-delay: 0.5s;
 }
 
 #sustainabilityDivider {
@@ -607,17 +627,20 @@ body {
 }
 
 #sustainabilityDesign {
-    transform: scale(0.8);
-    margin: 0;
-    padding: 0;
-}
+    z-index: 0;
 
-#designImage {
-    position: absolute;
-    transform: scale(0.25);
-    border-radius: 100px;
-    left: 147.5px;
-    bottom: -182.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../Main/images/lines\(normal\).png") no-repeat center center;
+    background-size: 300px;
+
+    overflow: visible;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    transform: scale(0.8);
 }
 
 #sustainabilityQuote {
@@ -629,62 +652,52 @@ body {
 #sustainabilityCourse.active .insideBorders>div:not(.topLine):not(.expansionButton):not(.connector),
 #sustainabilityCourse.active .courseDescription,
 #sustainabilityCourse.active .boxBrace,
-#sustainabilityCourse.active #sustainabilityCourseLine {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.6s ease-in-out;
-}
+#sustainabilityCourse.active #sustainabilityCourseLine {}
 
 #sustainabilityCourse.active .bars {
     opacity: 0;
     visibility: hidden;
-    transition: 0.01s;
-}
-
-#sustainabilityCourse.active {
-    height: auto;
-    transition: 0.6s ease-in-out;
-}
-
-#sustainabilityCourse.active .topLine {
-    margin-top: -1rem;
-    transition: 0.6s ease-in-out;
-}
-
-#sustainabilityCourse.active #sustainabilityCourseDescription {
-    opacity: 0;
     transition: 0.4s ease-in-out;
 }
 
+#sustainabilityCourse.active {}
+
+#sustainabilityCourse.active .topLine {}
+
+#sustainabilityCourse.active #sustainabilityCourseDescription {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s ease-in-out;
+}
+
+#sustainabilityCourse.active .buttonAndConnector {
+    margin-top: -10rem;
+    transition: 0.6s ease-in-out;
+    transition-delay: 200ms;
+}
+
 #sustainabilityCourse.active .expansionButton {
-    margin-top: -4.5rem;
-    transform: scale(0.9) rotate(45deg);
+    transform: scale(0.9) rotate(135deg);
+    /* margin-top: -4.75rem; */
     transition: 0.8s ease-in-out;
     transition-delay: 0.1s;
 }
 
 #sustainabilityCourse.active .connector {
-    transform: scale(0.8);
-    margin-top: -24.5rem;
     transition: 0.6s ease-in-out;
 }
 
 #sustainabilityCourse.active .lowerBorder {
-    margin-top: -35.5rem;
     transition: 0.6s ease-in-out;
 }
 
 #sustainabilityCourse.active .circles {
-    transform: scale(0.45);
+    margin-top: -10rem;
+    transform: scale(0.7);
     transition: 0.6s ease-in-out;
-    margin-top: -17rem;
 }
 
-#sustainabilityCourse.active #sustainabilityQuoteSection {
-    opacity: 0;
-    /* margin-top: -50rem; */
-    transition: 0.3s ease-in-out;
-}
+#sustainabilityCourse.active #sustainabilityQuoteSection {}
 
 
 
@@ -700,13 +713,15 @@ body {
     background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 1245px) {}
+
 
 @media only screen and (max-width: 960px) {
 
 
     #footerPage {
         overflow: hidden;
-        
+
         height: auto;
         display: flex;
         flex-direction: column;
@@ -789,8 +804,8 @@ body {
 
 
     #followInfo {
-        display: flex; 
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
