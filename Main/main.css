@@ -1024,6 +1024,15 @@ h1 {
         width: 60vw;
     }
 
+    #phaseContent {
+        height: 100%;
+    }
+
+    #phaseHeader {
+        margin-top: 50px;
+    
+    }
+
 
 }
 
