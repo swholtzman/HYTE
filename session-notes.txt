@@ -151,3 +151,24 @@ _______________________________________
     -----------------------------------
 
     -----------------------------------
+
+
+    -----------------------------------
+    Sunday June 30TH
+    -----------------------------------
+    BUGS TO FIX:
+        - 1100px to 875px, frames invisible for reg. butttons inside graphics
+        - landing button missing after change to flex @ 875 
+        - landing button says explore and directs you to programs page
+        - smallLandingFrame not centered
+        - our programs too big on scale
+        - rework landing paragraph sizes on responsiivity
+
+    Need to:
+        - bugs listed above
+        - fix state skipping (height 0-to-100 rq)
+        - add graphics to centers
+        - fix display height on active
+    -----------------------------------
+
+    -----------------------------------

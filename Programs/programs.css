@@ -83,13 +83,14 @@ body {}
     font-size: 26pt;
 }
 
-#programsGraphicButton {
+#landingButton {
     margin-top: 5rem;
-    margin-left: 20vw;
+    /* margin-left: 20vw; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 10rem;
 }
 
 #programsButton {
@@ -144,7 +145,7 @@ body {}
     /* WebKit equivalent */
 }
 
-#programsFrame {
+#landingFrame {
     transform: scale(0.85);
 }
 
@@ -219,6 +220,7 @@ body {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .programsButton {
@@ -475,7 +477,7 @@ body {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 60vw;
     margin-bottom: 2rem;
 
     opacity: 1;
@@ -679,7 +681,6 @@ body {}
 #sustainabilityCourseDescription {
     opacity: 1;
     transition: 0.6s ease-in-out;
-    width: auto;
 
     display: flex;
     flex-direction: column;
@@ -817,7 +818,15 @@ body {}
     background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 1245px) {}
+@media only screen and (max-width: 1245px) {
+    .upperBorder {
+        margin-top: -7.5px;
+    }
+
+    .lowerBorder {
+        margin-bottom: -7.5px;
+    }
+}
 
 @media only screen and (min-width: 1101px) {
     .programsGraphicButton {
@@ -914,9 +923,9 @@ body {}
         margin-top: -2rem;
     }
 
-    .programsButton {}
-
-    .programsFrame {}
+    .programsButton {
+        transform: scale(1.15);
+    }
 
     .mainLogo {
         grid-area: logo;
@@ -954,7 +963,7 @@ body {}
     }
 
     #sustainabilityCourseDescription {
-        width: 80vw;
+        /* width: 80vw; */
     }
 
     #sustainabilityQuoteSection {
@@ -963,7 +972,13 @@ body {}
 }
 
 @media only screen and (max-width: 960px) {
+    .topLine {
+        margin-top: -140px;
+    }
 
+    .circles {
+        transform: scale(0.9);
+    }
 
     #footerPage {
         overflow: hidden;
@@ -1079,6 +1094,22 @@ body {}
     }
 }
 
+    /* BUGS TO FIX:
+        - 1100px to 875px, frames invisible for reg. butttons inside graphics
+        - landing button missing after change to flex @ 875 
+        - landing button says explore and directs you to programs page
+        - smallLandingFrame not centered
+        - our programs too big on scale
+        - rework landing paragraph sizes on responsiivity
+        */
+        
+
+@media only screen and (min-width: 876px) {
+    #smallLandingFrame {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 875px) {
     /* Landing Content */
     #landingContent {
@@ -1091,11 +1122,24 @@ body {}
         height: auto;
     }
 
+    #landingFrame {
+        display: none;
+    }
+
     #landingText {
         width: 50vw;
         /* margin-left: 4rem; */
         margin: 0;
         margin-top: 30vh;
+
+    }
+
+    #landingButton {
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
     
@@ -1126,6 +1170,44 @@ body {}
         align-items: center;
     }
 
+    .topLine {
+        margin-top: -130px;
+        grid-template-rows: 60% 5% 30%;
+        max-height: 700px;
+    }
+
+    .circles {
+        transform: scale(0.8);
+    }
+
+    .programsGraphicButton {
+        transform: scale(0.9);
+    }
+
+    #smallLandingFrame {
+        margin-top: -4rem;
+    
+        transform: scale(0.8);
+    
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    
+        z-index: 10;
+    }
+    
+    .left-line {
+        margin-right: -10px;
+    }
+    
+    .arc {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .right-line {
+        margin-left: -10px;
+    }
 
 }
 
@@ -1134,20 +1216,36 @@ body {}
         font-size: 28pt;
     }
 
+    .topLine {
+        margin-top: -110px;
+        grid-template-rows: 50% 5% 30%;
+        max-height: 700px;
+    }
+
+    .circles {
+        transform: scale(0.7);
+    }
+
+    .programsGraphicButton {
+        transform: scale(0.8);
+    }
+
+}
+
+@media only screen and (max-width: 725px) {
+
 }
 
 @media only screen and (max-width: 615px) {
 
+    .topLine {
+        margin-top: -90px;
+        grid-template-rows: 55% 2.5% 35%;
+        max-height: 600px;
+    }
+
     .upperBorder {
         margin-top: -0.75rem;
-    }
-
-    .topLine {
-        margin-top: -180px;
-    }
-
-    .circles {
-        transform: scale(0.8);
     }
 
     .minimizedConnector {
@@ -1175,8 +1273,34 @@ body {}
 
     #sustainabilityQuote {
         font-size: 16pt;
-        width: 80vw;
-    
+        width: 70vw;
+
+    }
+
+    #sustainabilityDivider {
+        height: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .topLine {
+        margin-top: -90px;
+        grid-template-rows: 50% 2.5% 35%;
+        max-height: 600px;
+    }
+
+    .circles {
+        transform: scale(0.6);
+    }
+
+    .programsGraphicButton {
+        transform: scale(0.7);
+        margin-top: -1rem;
+    }
+
+    .lowerBorder {
+        margin-bottom: -0.75rem;
     }
 }
 
@@ -1188,14 +1312,21 @@ body {}
 }
 
 @media only screen and (max-width: 460px) {
+
+    .topLine {
+        margin-top: -90px;
+        grid-template-rows: 50% 2.5% 35%;
+        max-height: 500px;
+    }
+
     .circles {
-        margin-top: -3rem;
-        transform: scale(0.6);
+        transform: scale(0.5);
     }
 
     .programsGraphicButton {
         transform: scale(0.6);
         margin: 0;
+        margin-top: 2.5rem;
     }
 
     .minimizedConnector {
@@ -1220,6 +1351,10 @@ body {}
         width: 80vw;
         font-size: 16pt;
     }
+
+    .courseDescription {
+        width: 80vw;
+    }
 }
 
 @media only screen and (max-width: 445px) {
@@ -1232,4 +1367,8 @@ body {}
         margin-bottom: 0.5rem;
         padding-bottom: 0rem;
     }
+}
+
+@media only screen and (max-width: 414px) {
+
 }
