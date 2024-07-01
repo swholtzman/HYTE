@@ -72,10 +72,19 @@ body {
 }
 
 .primary-navigation {
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    overflow: hidden;
 }
+
+
+
+
 
 .links {
     top: 50vh; /* Adjust according to actual needs */

@@ -71,7 +71,7 @@ _______________________________________
         - 1440 x 900 (Laptop)
     -----------------------------------
         *** TABLET ***
-        - 800 x 1280 (Galexy Tablet)
+        - 800 x 1280 (Galaxy Tablet)
         - 768 x 1024 (Portrait Tablet)
     -----------------------------------
         *** MOBILE ***
@@ -138,5 +138,16 @@ _______________________________________
     -----------------------------------
 
     -----------------------------------
-    ___ June ___th
+    Saturday June 22nd
+    -----------------------------------
+    Completed:
+        -  Major programs rework
+
+    Need to:
+        - fix state skipping (height 0-to-100 rq)
+        - add graphics to centers
+        - fix display height on active
+        - add smaller-screen version (1100px? 1245px?)
+    -----------------------------------
+
     -----------------------------------

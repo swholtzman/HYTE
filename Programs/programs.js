@@ -21,7 +21,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Setup courses
+    // Function to handle screen width changes
+    function handleScreenWidthChange() {
+        const courses = ['mainCourse', 'sustainabilityCourse'];
+        const screenWidth = window.innerWidth;
+
+        courses.forEach(courseId => {
+            const course = document.getElementById(courseId);
+            if (!course) return;
+
+            const elementsToActivate = course.querySelectorAll('.circles, .innerContent, .expansionButton');
+
+            if (screenWidth <= 1100) {
+                // Set to inactive
+                course.classList.remove('active');
+                elementsToActivate.forEach(element => {
+                    element.classList.remove('active');
+                });
+            } else {
+                // Set to active
+                course.classList.add('active');
+                elementsToActivate.forEach(element => {
+                    element.classList.add('active');
+                });
+            }
+        });
+    }
+
+    // Initial setup
     setupCourse('mainCourse');
     setupCourse('sustainabilityCourse');
+
+    // Check screen width on load
+    handleScreenWidthChange();
+
+    // Add resize event listener
+    window.addEventListener('resize', handleScreenWidthChange);
 });

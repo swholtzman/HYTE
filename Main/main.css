@@ -508,8 +508,6 @@ h1 {
 }
 
 
-
-
 /* Program Phases */
 #programPhases {
     position: relative;
@@ -530,7 +528,6 @@ h1 {
     font-weight: 300;
     font-style: normal;
 }
-
 
 #phaseContent::before {
     content: '';
@@ -577,7 +574,6 @@ h1 {
     text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.75);
 
 }
-
 
 #phaseLogo {
     font-size: 100pt;

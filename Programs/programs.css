@@ -173,7 +173,9 @@ body {}
     justify-content: center;
     align-items: center;
     height: auto;
-    
+
+    /* overflow: hidden; */
+
     transition: 0.4s ease-in-out;
 }
 
@@ -205,10 +207,94 @@ body {}
     justify-content: center;
     align-items: center;
     height: auto;
+    width: auto;
     opacity: 1;
     visibility: visible;
     transition: 0.4s ease-in-out;
     /* background-color: orange; */
+}
+
+.programsGraphicButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.programsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    /* WebKit equivalent */
+}
+
+.programsButton .arrow path {
+    fill: white;
+}
+
+.programsButton .circle {
+    opacity: 0.8;
+
+    border-radius: 50%;
+    fill: rgba(2, 0, 100, 0.15);
+
+    box-shadow: none;
+    backdrop-filter: blur(6px) saturate(2) contrast(1.25);
+    -webkit-backdrop-filter: blur(6px) saturate(2) contrast(1.25);
+
+    transition: 300ms ease-out;
+    -webkit-transition: 300ms ease-out;
+    /* WebKit equivalent */
+}
+
+.programsButton .circularButton:hover .circle {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    /* WebKit equivalent */
+
+    background: none;
+    fill: rgba(2, 0, 100, 0.15);
+
+    backdrop-filter: blur(8px) saturate(3) contrast(1.5);
+    -webkit-backdrop-filter: blur(8px) saturate(3) contrast(1.5);
+
+    box-shadow: 10px 10px 20px 5px #070113, -10px -10px 20px 5px #3b1ca2a2;
+    -webkit-box-shadow: 10px 10px 20px 5px #070113, -10px -10px 20px 5px #3b1ca2a2;
+    /* WebKit equivalent */
+
+    transition: 500ms ease-out;
+    -webkit-transition: 500ms ease-out;
+    /* WebKit equivalent */
+}
+
+.programsFrame {
+    margin-top: -4rem;
+
+    transform: scale(0.8);
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    z-index: 10;
+}
+
+.left-line {
+    margin-right: -10px;
+}
+
+.arc {
+    margin: 0;
+    padding: 0;
+}
+
+.right-line {
+    margin-left: -10px;
 }
 
 
@@ -223,6 +309,8 @@ body {}
     width: 85vw;
     margin-top: 4rem;
     transition: 0.4s ease-in-out;
+
+    margin-bottom: 10vh;
 }
 
 .upperBorder {
@@ -313,6 +401,7 @@ body {}
     color: #FFF;
     z-index: 10;
     transition: 0.6s ease-in-out;
+    white-space: nowrap;
 }
 
 #mainCourseLines {
@@ -327,7 +416,7 @@ body {}
     align-self: center;
     grid-area: circles;
     scale: 70%;
-    
+
     transition: 0.6s ease-in-out;
 }
 
@@ -386,12 +475,12 @@ body {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: auto;
     margin-bottom: 2rem;
 
     opacity: 1;
     transition: 0.8s ease-in-out;
-    
+
 }
 
 #mainCourseDescription {}
@@ -411,11 +500,10 @@ body {}
     margin-top: 2rem;
     margin-bottom: 2rem;
     transition: 0.6s ease-in-out;
+    white-space: nowrap;
 }
 
-#theMainTitle {
-    
-}
+#theMainTitle {}
 
 .descriptionText {
     font-size: 18pt;
@@ -486,16 +574,16 @@ body {}
     opacity: 0;
     /* visibility: hidden; */
     transition: 0.6s ease-in-out;
-    
+
 }
 
 
 #mainCourse.active,
 #mainCourse.active .insideBorders,
-#mainCourse.active .courseBG{
+#mainCourse.active .courseBG {
     height: auto;
     transition: 0.6s ease-in-out;
-    
+
 }
 
 #mainCourse.active .innerContent {
@@ -591,6 +679,12 @@ body {}
 #sustainabilityCourseDescription {
     opacity: 1;
     transition: 0.6s ease-in-out;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -610,6 +704,10 @@ body {}
 
 #sustainabilityCourseExpansion {}
 
+#sustainabilityText {
+    width: auto;
+}
+
 #sustainabilityQuoteSection {
     /* margin-top: 10rem; */
     display: flex;
@@ -617,6 +715,7 @@ body {}
     align-items: center;
     opacity: 1;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    overflow: hidden;
 }
 
 #sustainabilityDivider {
@@ -697,7 +796,12 @@ body {}
     transition: 0.6s ease-in-out;
 }
 
-#sustainabilityCourse.active #sustainabilityQuoteSection {}
+#sustainabilityCourse.active #sustainabilityQuoteSection {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.6s ease-in-out;
+    transition-delay: 0.1s;
+}
 
 
 
@@ -715,6 +819,148 @@ body {}
 
 @media only screen and (max-width: 1245px) {}
 
+@media only screen and (min-width: 1101px) {
+    .programsGraphicButton {
+        display: none;
+    }
+
+    .minimizedConnector {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .courseContent,
+    .courseBG {
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #sustainabilityCourse {
+        width: 90vw;
+    }
+
+    #mainCourse {
+        width: 90vw;
+    }
+
+    .upperBorder {
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lowerBorder {
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-bottom: -0.5rem;
+    }
+
+    .insideBorders {
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .topLine {
+        margin-top: -120px;
+        width: 90vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 10% 20%;
+        grid-template-areas:
+            "graphics"
+            "connector"
+            "logo";
+
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        gap: 1rem;
+    }
+
+    .courseTitle {
+        grid-area: logo;
+        padding: 0;
+        margin: 0;
+        margin-right: 4rem;
+    }
+
+    #sustainabilityCourseTitle {
+        transform: scale(1.6);
+        margin: 0;
+        margin-right: 10rem;
+    }
+
+    #mainCourseTitle {
+        grid-area: logo;
+        margin-right: 4rem;
+        margin-top: 0rem;
+    }
+
+    .programsGraphicButton {
+        grid-area: graphics;
+    }
+
+    .minimizedConnector {
+        display: block;
+        grid-area: connector;
+        margin-top: -2rem;
+    }
+
+    .programsButton {}
+
+    .programsFrame {}
+
+    .mainLogo {
+        grid-area: logo;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mainName {}
+
+    .mainCourseLines {
+        justify-self: center;
+    }
+
+    .circles {
+        grid-area: graphics;
+    }
+
+    .registerButton {
+        display: none;
+    }
+
+    .expansionButton {
+        display: none;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .buttonAndConnector {
+        display: none;
+    }
+
+    #sustainabilityCourseDescription {
+        width: 80vw;
+    }
+
+    #sustainabilityQuoteSection {
+        width: 90vw;
+    }
+}
 
 @media only screen and (max-width: 960px) {
 
@@ -830,6 +1076,149 @@ body {}
     #estInfo {
         font-size: 12pt;
 
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    /* Landing Content */
+    #landingContent {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80vw;
+        height: auto;
+    }
+
+    #landingText {
+        width: 50vw;
+        /* margin-left: 4rem; */
+        margin: 0;
+        margin-top: 30vh;
+
+    }
+    
+    #our {
+
+        font-size: 60pt;
+    }
+    
+    #programs {
+        color: #D9D9D9;
+        text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
+        font-size: 65pt;
+    }
+    
+    #landingParagraph {
+        width: 90%;
+        margin-top: 2rem;
+        color: #FFF;
+        font-size: 26pt;
+    }
+    
+    #programsGraphicButton {
+        margin: 0;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 725px) {
+    .descriptionTitle {
+        font-size: 28pt;
+    }
+
+}
+
+@media only screen and (max-width: 615px) {
+
+    .upperBorder {
+        margin-top: -0.75rem;
+    }
+
+    .topLine {
+        margin-top: -180px;
+    }
+
+    .circles {
+        transform: scale(0.8);
+    }
+
+    .minimizedConnector {
+        transform: scale(0.75);
+        justify-self: center;
+    }
+
+    .programsGraphicButton {
+        transform: scale(0.8);
+        margin: 0;
+    }
+
+    #sustainabilityCourseTitle {
+        transform: scale(1.2);
+        margin-right: 6rem;
+    }
+
+    .descriptionTitle {
+        font-size: 26pt;
+    }
+
+    .descriptionText {
+        font-size: 16pt;
+    }
+
+    #sustainabilityQuote {
+        font-size: 16pt;
+        width: 80vw;
+    
+    }
+}
+
+@media only screen and (min-width: 461px) {
+
+    .programsGraphicButton {
+        margin-bottom: -4rem;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .circles {
+        margin-top: -3rem;
+        transform: scale(0.6);
+    }
+
+    .programsGraphicButton {
+        transform: scale(0.6);
+        margin: 0;
+    }
+
+    .minimizedConnector {
+        transform: scale(0.6);
+        justify-self: center;
+    }
+
+    #mainCourseTitle {
+        transform: scale(0.8);
+    }
+
+    #sustainabilityCourseTitle {
+        transform: scale(1);
+        margin-right: 5rem;
+    }
+
+    .descriptionTitle {
+        font-size: 20pt;
+    }
+
+    .descriptionText {
+        width: 80vw;
+        font-size: 16pt;
     }
 }
 
