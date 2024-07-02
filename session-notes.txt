@@ -134,7 +134,7 @@ _______________________________________
         - Creation of cursor follower
 
     - Sticking Points:
-        - Cursor followed until morion stops, where "blob" returns to top left of screen (bug)
+        - Cursor followed until motion stops, where "blob" returns to top left of screen (bug)
     -----------------------------------
 
     -----------------------------------
@@ -154,7 +154,7 @@ _______________________________________
 
 
     -----------------------------------
-    Sunday June 30TH
+    Sunday June 30th
     -----------------------------------
     BUGS TO FIX:
         - 1100px to 875px, frames invisible for reg. butttons inside graphics
@@ -167,6 +167,22 @@ _______________________________________
     Need to:
         - bugs listed above
         - fix state skipping (height 0-to-100 rq)
+        - add graphics to centers
+        - fix display height on active
+    -----------------------------------
+
+    -----------------------------------
+    
+
+    -----------------------------------
+    Monday July 1st
+    -----------------------------------
+    BUGS TO FIX:
+        - our programs too big on scale
+        - rework landing paragraph sizes on responsiivity
+
+    Need to:
+        - bugs listed above
         - add graphics to centers
         - fix display height on active
     -----------------------------------
