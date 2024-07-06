@@ -30,7 +30,6 @@ body {}
 #landingSection {
     grid-area: landing;
     height: 100vh;
-
 }
 
 #landingBG {
@@ -44,7 +43,6 @@ body {}
 }
 
 #landingContent {
-    margin-top: 10vh;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -56,7 +54,7 @@ body {}
 #landingText {
     width: 50vw;
     margin-left: 4rem;
-    margin-top: 30vh;
+    margin-top: 10rem;
 }
 
 #landingHeader {
@@ -93,6 +91,11 @@ body {}
     justify-content: center;
     align-items: center;
     margin-left: 10rem;
+}
+
+#programsGraphicButton {
+    margin-left: 10vw;
+    margin-top: 10rem;
 }
 
 #programsButton {
@@ -199,7 +202,7 @@ body {}
 
 }
 
-.courseContent{
+.courseContent {
     height: auto;
     transition: 0.6s ease-in-out;
 }
@@ -210,12 +213,10 @@ body {}
     justify-content: center;
     align-items: center;
     height: auto;
-    max-height: 800px;
     width: auto;
     opacity: 1;
     visibility: visible;
     transition: 0.4s ease-in-out;
-    /* background-color: orange; */
 }
 
 .programsGraphicButton {
@@ -223,7 +224,7 @@ body {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .programsButton {
@@ -301,7 +302,6 @@ body {}
 .right-line {
     margin-left: -10px;
 }
-
 
 /* MAIN COURSE */
 
@@ -512,6 +512,8 @@ body {}
 
 .descriptionText {
     font-size: 18pt;
+    opacity: 1;
+    transition: 0.8s ease-in-out;
 }
 
 #theMainText {}
@@ -571,8 +573,6 @@ body {}
     transition: 0.8s ease-in-out;
     /* margin-bottom: -0.5rem */
 }
-
-
 
 /* SUSTAINABILITY COURSE */
 #sustainabilityCourse {
@@ -677,19 +677,13 @@ body {}
     width: 30rem;
 }
 
-
-
-
-
-
 /* WHEN NOT VISIBLE : ACTIVE */
-
 #mainCourse.active .insideBorders>div:not(.topLine):not(.buttonAndConnector),
 #mainCourse.active .courseDescription,
 #mainCourse.active #mainCourseLines {
     opacity: 0;
     transition: 0.6s ease-in-out;
-
+    height: 0px;
 }
 
 #mainCourse.active .innerContent,
@@ -701,13 +695,13 @@ body {}
 #mainCourse.active .bars,
 #sustainabilityCourse.active .bars {
     opacity: 0;
-    visibility: hidden;
+    max-height: 0px;
     transition: 0.4s ease-in-out;
 }
 
 #sustainabilityCourse.active #sustainabilityCourseDescription {
     opacity: 0;
-    visibility: hidden;
+    max-height: 0px;
     transition: 0.6s ease-in-out;
 }
 
@@ -749,8 +743,6 @@ body {}
     transition-delay: 0.1s;
 }
 
-
-
 /* Footer Page */
 #footerPage {
     grid-area: footer;
@@ -781,16 +773,106 @@ body {}
     .minimizedConnector {
         display: none;
     }
+
+    #smallLandingFrame {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
+
+    #landingFrame {
+        display: none;
+    }
+
+    #landingCaption {
+        width: 60vw;
+        margin-bottom: 2rem;
+    }
+    
+    .programsGraphicButton {
+        transform: scale(0.9);
+    }
+
+    #programsButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+
+    }
+
+    #smallLandingFrame {
+        transform: scale(0.8);
+
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-left: 10rem;
+        margin-top: -3.5rem;
+
+        /* z-index: 10; */
+    }
+
+    .left-line {
+        margin-right: -10px;
+    }
+
+    .arc {
+        margin: 0;
+        padding: 0;
+    }
+
+    .right-line {
+        margin-left: -10px;
+    }
+
+    #landingSection {
+        height: auto;
+    }
+
+    #landingContent {
+        margin-top: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: auto;
+    }
+
+    #landingBG {
+        height: auto;
+
+    }
+
     .courseContent,
     .courseBG {
         width: 90vw;
+        height: auto;
         justify-content: center;
         align-items: center;
         padding: 0;
         margin: 0;
+    }
+
+    .insideBorders {
+        width: 90vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        max-height: auto;
+        padding: 0;
+    }
+
+    .courseDescription {
+        width: 80vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
     }
 
     #sustainabilityCourse {
@@ -813,12 +895,6 @@ body {}
         align-items: center;
         margin: 0;
         margin-bottom: -0.5rem;
-    }
-
-    .insideBorders {
-        width: 90vw;
-        justify-content: center;
-        align-items: center;
     }
 
     .topLine {
@@ -907,12 +983,8 @@ body {}
         display: none;
     }
 
-    #sustainabilityCourseDescription {
-        /* width: 80vw; */
-    }
-
     #sustainabilityQuoteSection {
-        width: 90vw;
+        display: none;
     }
 }
 
@@ -1039,7 +1111,7 @@ body {}
     }
 }
 
-    /* BUGS TO FIX:
+/* BUGS TO FIX:
         - 1100px to 875px, frames invisible for reg. butttons inside graphics
         - landing button missing after change to flex @ 875 
         - landing button says explore and directs you to programs page
@@ -1047,15 +1119,15 @@ body {}
         - our programs too big on scale
         - rework landing paragraph sizes on responsiivity
         */
-        
 
-@media only screen and (min-width: 876px) {
-    #smallLandingFrame {
-        display: none;
+@media only screen and (min-width: 876px) and (max-width: 1100px){
+    #programsButton {
+        margin-top: -10rem;
     }
 }
 
 @media only screen and (max-width: 875px) {
+
     /* Landing Content */
     #landingContent {
         margin-top: 1rem;
@@ -1066,10 +1138,6 @@ body {}
         align-items: center;
         width: 80vw;
         height: auto;
-    }
-
-    #landingFrame {
-        display: none;
     }
 
     #landingText {
@@ -1088,25 +1156,25 @@ body {}
         align-items: center;
 
     }
-    
+
     #our {
 
         font-size: 60pt;
     }
-    
+
     #programs {
         color: #D9D9D9;
         text-shadow: 2px 6px 12px rgba(0, 0, 0, 0.50);
         font-size: 65pt;
     }
-    
+
     #landingParagraph {
         width: 90%;
         margin-top: 2rem;
         color: #FFF;
         font-size: 26pt;
     }
-    
+
     #programsGraphicButton {
         margin: 0;
         margin-top: 5rem;
@@ -1124,44 +1192,6 @@ body {}
 
     .circles {
         transform: scale(0.8);
-    }
-
-    .programsGraphicButton {
-        transform: scale(0.9);
-    }
-
-    #programsButton {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 20;
-
-    }
-
-    #smallLandingFrame {
-        transform: scale(0.8);
-    
-        display: flex;
-        margin: 0;
-        padding: 0;
-        margin-left: 10rem;
-        margin-top: -3.5rem;
-    
-        /* z-index: 10; */
-    }
-    
-    .left-line {
-        margin-right: -10px;
-    }
-    
-    .arc {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .right-line {
-        margin-left: -10px;
     }
 
 }
@@ -1191,11 +1221,20 @@ body {}
 
 }
 
-@media only screen and (max-width: 725px) {
-
+@media screen and (max-width: 725px) {
+    #our {
+        font-size: 50pt;
+    }
+    #programs {
+        font-size: 55pt;
+    }
 }
 
-@media only screen and (max-width: 615px) {
+@media screen and (max-width: 615px) {
+
+    #programsSection {
+        height: auto;
+    }
 
     .topLine {
         margin-top: -90px;
@@ -1242,7 +1281,18 @@ body {}
     }
 }
 
-@media only screen and (max-width: 560px) {
+@media screen and (max-width: 560px) {
+    #our {
+        font-size: 40pt;
+    }
+    #programs {
+        font-size: 45pt;
+    }
+
+    #landingCaption {
+        font-size: 18pt;
+    }
+
     .topLine {
         margin-top: -90px;
         grid-template-rows: 50% 2.5% 35%;
@@ -1261,16 +1311,51 @@ body {}
     .lowerBorder {
         margin-bottom: -0.75rem;
     }
+
+    .descriptionText {
+        height: auto;
+    }
+
+    .insideBorders {
+        height: auto;
+    }
+
+    .courseDescription {
+        height: auto;
+    }
+
+    .courseContent {
+        height: auto;
+    }
 }
 
-@media only screen and (min-width: 461px) {
+@media screen and (max-width: 510px) {
+
+    .descriptionText {
+        width: 80vw;
+        font-size: 14pt;
+    }
+}
+
+@media screen and (min-width: 461px) {
 
     .programsGraphicButton {
         margin-bottom: -4rem;
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media screen and (max-width: 460px) {
+
+    #our {
+        font-size: 30pt;
+    }
+    #programs {
+        font-size: 35pt;
+    }
+
+    #landingCaption {
+        font-size: 18pt;
+    }
 
     .topLine {
         margin-top: -90px;
@@ -1308,7 +1393,6 @@ body {}
 
     .descriptionText {
         width: 80vw;
-        font-size: 16pt;
     }
 
     .courseDescription {
@@ -1328,6 +1412,14 @@ body {}
     }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 414px) {}
 
+@media only screen and (max-width: 385px) {
+    /* #theMainCourse {
+        margin-top: 4rem;
+    }
+
+    #mainCourse .descriptionText {
+        margin-bottom: 5rem;
+    } */
 }
