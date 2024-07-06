@@ -792,6 +792,7 @@ body {}
     
     .programsGraphicButton {
         transform: scale(0.9);
+        margin: 0;
     }
 
     #programsButton {
@@ -800,7 +801,8 @@ body {}
         justify-content: center;
         align-items: center;
         z-index: 20;
-
+        margin: 0;
+        margin-left: -2rem;
     }
 
     #smallLandingFrame {

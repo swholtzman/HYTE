@@ -36,6 +36,8 @@ body {
     filter: contrast(130%) brightness(70%) saturate(110%);
 
     pointer-events: none;
+
+    pointer-events: none;
     
 }
 
@@ -82,10 +84,6 @@ body {
     overflow: hidden;
 }
 
-
-
-
-
 .links {
     top: 50vh; /* Adjust according to actual needs */
     right: 0;
@@ -96,7 +94,6 @@ body {
     right: 20vw;
 }
 
-/* Ensure that all clickable or interactive elements have pointer-events set to auto */
 .primary-navigation a, .links a {
     pointer-events: auto;
 }
@@ -121,8 +118,6 @@ body {
     text-align: center;
 }
   
-
-
 #leftNav {
     gap: 1rem;
     margin: 0.5rem;
@@ -133,7 +128,6 @@ body {
 #leftNav a {
     letter-spacing: 0.2rem;
 }
-
 
 #leftNav span {
     font-size: 7.42pt;
@@ -236,7 +230,6 @@ body {
 } */
 
 @media (min-width: 1600px) {}
-
    /* body {
         font-size: 18pt;
     }
@@ -284,7 +277,6 @@ body {
     }
 
 }
-
 /*
     body {
         font-size: 12pt;
@@ -305,6 +297,7 @@ body {
     }
 
 } */
+
 @media (max-width: 1000px) {}
     /* #rightNav {
         margin-right: 4rem;
