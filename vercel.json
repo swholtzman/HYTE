@@ -1,3 +1,5 @@
 {
-  "routes": [{ "src": "/", "dest": "/Main/main.html" }]
+  "public": "Main",
+  "cleanUrls": true,
+  "rewrites": [{ "source": "/", "destination": "/main.html" }]
 }
