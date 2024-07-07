@@ -17,7 +17,7 @@ body {
     overflow: hidden;
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto;
+    grid-template-rows: auto;
     grid-template-areas:
         "landing"
         "mentors"
@@ -50,6 +50,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     height: auto;
+    margin-bottom: 5rem;
 }
 
 #landingText {
