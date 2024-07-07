@@ -316,6 +316,7 @@ body {}
     transition: 0.4s ease-in-out;
 
     margin-bottom: 10vh;
+    /* overflow: hidden; */
 }
 
 .upperBorder {
@@ -481,10 +482,13 @@ body {}
     justify-content: center;
     align-items: center;
     width: 60vw;
+    max-height: auto;
     margin-bottom: 2rem;
 
     opacity: 1;
     transition: 0.8s ease-in-out;
+
+    overflow: hidden;
 
 }
 
@@ -514,6 +518,7 @@ body {}
     font-size: 18pt;
     opacity: 1;
     transition: 0.8s ease-in-out;
+    height: auto;
 }
 
 #theMainText {}
@@ -677,31 +682,58 @@ body {}
     width: 30rem;
 }
 
+#mainCourse .insideBorders > div:not(.topLine):not(.buttonAndConnector),
+#mainCourse .courseDescription,
+#mainCourse #mainCourseLines,
+#sustainabilityCourse .insideBorders > div:not(.topLine):not(.buttonAndConnector),
+#sustainabilityCourse .courseDescription,
+#sustainabilityCourse #mainCourseLines {
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    max-height: 1000px; /* A value larger than any expected content height */
+    opacity: 1;
+}
+
 /* WHEN NOT VISIBLE : ACTIVE */
 #mainCourse.active .insideBorders>div:not(.topLine):not(.buttonAndConnector),
 #mainCourse.active .courseDescription,
-#mainCourse.active #mainCourseLines {
+#mainCourse.active #mainCourseLines,
+#sustainabilityCourse.active .insideBorders>div:not(.topLine):not(.buttonAndConnector),
+#sustainabilityCourse.active .courseDescription,
+#sustainabilityCourse.active #mainCourseLines {
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    max-height: 0px;
     opacity: 0;
+}
+
+#mainCourse.active #theMainCourse {
+    /* height: 0px; */
     transition: 0.6s ease-in-out;
-    height: 0px;
+
+}
+
+#mainCourse.active .descriptionText,
+#sustainabilityCourse.active .descriptionText {
+    /* opacity: 0; */
+    /* max-height: 0px; */
+    transition: 0.8s ease-in-out;
 }
 
 #mainCourse.active .innerContent,
 #sustainabilityCourse.active .innerContent {
-    max-height: 0px;
+    /* max-height: 0px; */
     transition: 0.8s ease-in-out;
 }
 
 #mainCourse.active .bars,
 #sustainabilityCourse.active .bars {
-    opacity: 0;
-    max-height: 0px;
+    /* opacity: 0; */
+    /* max-height: 0px; */
     transition: 0.4s ease-in-out;
 }
 
 #sustainabilityCourse.active #sustainabilityCourseDescription {
-    opacity: 0;
-    max-height: 0px;
+    /* opacity: 0; */
+    /* max-height: 0px; */
     transition: 0.6s ease-in-out;
 }
 
@@ -737,8 +769,8 @@ body {}
 }
 
 #sustainabilityCourse.active #sustainabilityQuoteSection {
-    opacity: 0;
-    transform: scale(0.8);
+    /* opacity: 0; */
+    /* transform: scale(0.8); */
     transition: 0.6s ease-in-out;
     transition-delay: 0.1s;
 }
@@ -789,7 +821,7 @@ body {}
         width: 60vw;
         margin-bottom: 2rem;
     }
-    
+
     .programsGraphicButton {
         transform: scale(0.9);
         margin: 0;
@@ -879,6 +911,10 @@ body {}
 
     #sustainabilityCourse {
         width: 90vw;
+    }
+
+    #sustainabilityTitle {
+        display: none;
     }
 
     #mainCourse {
@@ -1122,7 +1158,7 @@ body {}
         - rework landing paragraph sizes on responsiivity
         */
 
-@media only screen and (min-width: 876px) and (max-width: 1100px){
+@media only screen and (min-width: 876px) and (max-width: 1100px) {
     #programsButton {
         margin-top: -10rem;
     }
@@ -1227,6 +1263,7 @@ body {}
     #our {
         font-size: 50pt;
     }
+
     #programs {
         font-size: 55pt;
     }
@@ -1287,6 +1324,7 @@ body {}
     #our {
         font-size: 40pt;
     }
+
     #programs {
         font-size: 45pt;
     }
@@ -1351,6 +1389,7 @@ body {}
     #our {
         font-size: 30pt;
     }
+
     #programs {
         font-size: 35pt;
     }
